@@ -1,0 +1,35 @@
+/*--------- Ombrage des boites -----------------*/
+@mixin ombre-primaire {
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+}
+
+@mixin ombre-secondaire {
+  box-shadow: 0 5px 15px 0 #9d9d9d;
+}
+/*--------- Couleur de fond ---------------------*/
+@mixin gradiant {
+  background: linear-gradient(#ff79da, #9356dc);
+}
+/*************************************************/
+/*------ Media queries differents eécrans -------*/
+
+@mixin desktop-only {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin tablette-only {
+  @media only screen and (min-width: 765px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media only screen and (max-width: 420px) {
+    @content;
+  }
+}
+
+
+
+
