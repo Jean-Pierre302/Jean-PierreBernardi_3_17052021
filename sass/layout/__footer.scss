@@ -1,3 +1,4 @@
+/*-------- Pied de page ----*/
 footer a {
   text-decoration: none;
   color: #fff;
@@ -8,17 +9,20 @@ footer a {
   padding: 20px;
   text-align: center;
   color: #fff;
+  @include mobile {
+  text-align: left;
+  }
 
   &__logo {
     filter: invert(1);
     max-width: 150px;
-    @include tablette-only {
+    @include tablette {
       max-width: none;
     }
   }
   &__lien {
     text-align: left;
-    @include tablette-only {
+    @include tablette {
       text-align: center;
     }
   }

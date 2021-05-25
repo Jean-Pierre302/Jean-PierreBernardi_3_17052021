@@ -7,7 +7,7 @@
   text-align: center;
   border-radius: 25px;
   font-size: 15px;
-  color: #fff;
+  color: white;
   @include ombre-primaire;
   font-weight: bold;
   margin: 0 0.3em 0.3em 0;
@@ -16,13 +16,16 @@
   &:hover {
     background: linear-gradient(#f77dd4, #ab65fa);
     @include ombre-primaire;
-  }
+    }
+    @include bureau {
+    margin-top: 1rem;
+    }
 }
 
-%aime-anime {
+%coeur-plein {
   transition: 0.5s 0s ease;
 }
-.aime {
+.coeur {
   position: relative;
   margin-left: auto;
   margin-top: 4px;
@@ -41,21 +44,20 @@
       @include gradiant;
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
-
       opacity: 1;
-      z-index: 999;
-      @extend %aime-anime;
+      z-index: 100;
+      @extend %coeur-plein;
     }
   }
   &:hover {
     cursor: pointer;
     overflow: hidden;
     opacity: 1;
-    @extend %aime-anime;
+    @extend %coeur-plein;
   }
   .icones-defaut:hover {
     opacity: 0;
-    @extend %aime-anime;
+    @extend %coeur-plein;
   }
 }
 
@@ -65,7 +67,7 @@
   margin-top: 25px;
   width: 60%;
 
-  @include tablette-only {
+  @include tablette {
     width: 20%;
   }
 }

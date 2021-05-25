@@ -1,0 +1,196 @@
+/*------- Animations ----------*/
+@import "../layout/_keyframes";
+
+.menu__texte {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  @include ombre-primaire;
+  margin: 10px 0;
+  flex: 1 0 33%;
+  overflow: hidden;
+
+  @include bureau {
+    flex: 25%;
+    margin-left: 15px;
+  }
+
+  &:hover {
+    @include ombre-secondaire;
+  }
+
+  .prix__fiche {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 18px;
+    padding-right: 10px;
+    text-align: right;
+  }
+  .controle {
+    display: none;
+    width: 30%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .bouton-plat {
+    font-size: 24px;
+    color: white;
+    transform: rotate(360deg);
+  }
+}
+
+.menu__texte:hover .prix__fiche {
+  animation: checkbox-contain ease 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  min-width: 50px;
+}
+
+.menu__texte:hover .controle {
+  display: block;
+  flex: 0 0 15%;
+  background: $couleur-tertiaire;
+  max-width: 50px;
+  overflow: hidden;
+  animation: checkbox ease 0.3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+.menu__texte:hover .bouton-plat {
+  position: absolute;
+  left: 27%;
+  top: 30%;
+  background: $couleur-tertiaire;
+  animation: validation ease 0.5s 1;
+}
+
+@for $i from 1 through 15 {
+  .effet-#{$i} {
+    animation: fadeIn 0.4s * $i;
+  }
+}
+
+.toupie {
+  animation: spinloader 3s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+  background: $animation-bg-color;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  text-align: center;
+  z-index: 999;
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
+%activite-avant {
+  display: inline-block;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: $couleur-secondaire;
+}
+
+%activite-apres {
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: $couleur-secondaire;
+}
+
+.chargement {
+  display:inline block;
+  vertical-align: middle;
+  width: 100px;
+  left: 55%;
+  border:solid 2vmin transparent;
+  border-radius:50%;
+  overflow: hidden;
+  padding: 10px;
+  border-right-color:$couleur-primaire;
+  border-top-color:$couleur-primaire;
+  animation:spin 1s infinite linear;
+  animation-fill-mode:both;
+  box-sizing:border-box;
+  height:20vmin;
+  left:calc(50% - 10vmin);
+  position:fixed;
+  top:calc(50% - 10vmin);
+  width:20vmin;
+  z-index:100;
+  @include bureau {
+  left: 50%;
+  top:57%;
+  margin-left: -6em;
+ 
+  }
+  &::before {
+    animation:spin 2s infinite linear;
+    border:solid 2vmin transparent;
+    border-radius:50%;
+    border-right-color:$couleur-secondaire;
+    border-top-color:$couleur-secondaire;
+    box-sizing:border-box;
+    content:"";
+    height:16vmin;
+    left:0;
+    position:absolute;
+    top:0;
+    width:16vmin;
+    @extend %activite-avant;
+    animation: chargement 3s infinite;
+    
+    }
+  &::after {
+    animation:spin 3s infinite linear;
+    border:solid 2vmin transparent;
+    border-radius:50%;
+    border-right-color:$couleur-tertiaire;
+    border-top-color:$couleur-tertiaire;
+    box-sizing:border-box;
+    content:"";
+    height:12vmin;
+    left:2vmin;
+    position:absolute;
+    top:2vmin;
+    width:12vmin;
+    @extend %activite-apres;
+    animation: chargement 3s infinite;
+    }
+
+}
+
+@keyframes spin {
+  100% {
+    transform:rotate(360deg);
+    }
+}
+
+
+
+
+
+

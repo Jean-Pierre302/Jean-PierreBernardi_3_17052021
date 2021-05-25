@@ -1,8 +1,9 @@
+/*--------- Pages Restaurants --------*/
 @import "../components/_buttons";
-
+@import "../layout/_animations";
 
 body {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
@@ -12,16 +13,13 @@ body {
   overflow-x: hidden;
 }
 
-.selection {
-display:flex;
-}
-
 h1 {
   font-size: 1.5em;
   line-height: 1;
   font-weight: bold;
 }
-/*****Header****/
+
+/*---------- Header -------------*/
 .menu__header {
   display: flex;
   flex-direction: column;
@@ -38,7 +36,7 @@ h1 {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid #f4f4f4;
     padding: 5px 46px;
-    @include desktop-only {
+    @include bureau {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -47,110 +45,127 @@ h1 {
   }
 }
 
-header .header__retour {
+header .header__retour__icones {
   display: block;
-  margin-right: 275px;
+  margin-right: auto;
   position: absolute;
-  left: 25px;
-  color: #000;
+  left: 20px;
+  color: black;
 }
 
-header .cover__img {
-  height: 270px;
+header .couverture__image {
+  height: 17rem;
   width: 100%;
   z-index: -1;
 }
 
-header .cover__img img {
+header .couverture__image image {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
-/*Menu restaurants*/
-.bg-grey {
+.fond-resto {
   background: #f6f6f6;
 }
 
 .menu main {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
-  margin-top: -50px;
-  z-index: 999;
-}
-.menu .menu__summary {
+  margin-top: -5.5rem;
+  z-index: 100;
+  }
+.menu .menu__choix {
   position: relative;
   width: 100%;
-}
+  }
 
-.menu__title {
+.menu__resto {
   font-family: $logo-title-font;
-  font-weight: normal;
-  padding: 20px 0 20px 20px;
+  font-weight: bold;
+  letter-spacing:0.1rem;
+  padding-top:1.5rem;
+  margin-left:1.5rem;
+  @include bureau {
+  text-align: center;
+  font-size:1.5rem;
+  }
 }
 
-.aime-menu {
+.coeur-menu {
   position: absolute;
   right: 30px;
   top: 20px;
 }
 
 .menu__plats {
-  padding: 20px;
-}
+  padding: 10px; 
+  }
 
 .menu__details {
-  @include desktop-only {
+  @include bureau {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-  }
+    }
 }
 
-.libelle-2 {
-  margin: 25px 0;
-  font-size: 18px;
+.carte__resto {
+  margin: 30px 0 10px 10px;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  @include desktop-only {
-    padding: 15px 0 15px 15px;
-    font-size: 12px;
+  @include bureau {
+    margin:0;
+    font-size: 0.75rem;
     width: 100%;
+    text-align: center;
+
   }
 
   &:after {
     content: "";
-    border-bottom: 2px solid $color-tertiary;
+    border-bottom: 2px solid $couleur-tertiaire;
     display: block;
     padding-top: 3px;
-    width: 40px;
-  }
+    width: 3rem;
+    @include bureau {
+    border-bottom:none;
+    }
+    }
 }
 
 %text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.prod {
-  font-size: 20px;
+  }
+
+.produit {
+  font-size: 1rem;
   font-weight: $fontWeight;
   @extend %text-overflow;
-}
-h4 {
-  color: #333;
-  font-size: 15px;
-  font-weight: normal;
-  @extend %text-overflow;
+  @include bureau {
+  width:40px;
+  }
 }
 
-.menu__title__prix {
+h4 {
+  color: #333;
+  font-size: 0.75rem;
+  font-weight: normal;
+  @extend %text-overflow;
+ }
+
+.menu__resto__prix {
   width: 80%;
   padding: 10px;
   @extend %text-overflow;
-}
+  
+  }
 
-.command-btn {
+.commander-bouton {
   text-align: center;
+  margin-bottom:3rem;
 }

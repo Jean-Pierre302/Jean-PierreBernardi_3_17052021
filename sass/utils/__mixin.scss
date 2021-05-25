@@ -1,4 +1,4 @@
-/*--------- Ombrage des boites -----------------*/
+//--------- Ombrage des boites -----------------//
 @mixin ombre-primaire {
   box-shadow: 0 5px 15px 0 #c3c3c3;
 }
@@ -6,25 +6,36 @@
 @mixin ombre-secondaire {
   box-shadow: 0 5px 15px 0 #9d9d9d;
 }
-/*--------- Couleur de fond ---------------------*/
+//--------- Couleur de fond ---------------------//
 @mixin gradiant {
   background: linear-gradient(#ff79da, #9356dc);
 }
-/*************************************************/
-/*------ Media queries differents eécrans -------*/
 
-@mixin desktop-only {
-  @media only screen and (min-width: 1024px) {
+//-----------  Eclaircissement ------------------//
+@mixin eclaircir {
+  filter: brightness(150%);
+}
+
+//---------- Assombrissement --------------------//
+@mixin foncer {
+  filter: brightness(50%);
+}
+
+
+//------ Media queries différents écrans -------//
+
+@mixin bureau {
+  @media only screen and (min-width: 1025px) {
     @content;
   }
 }
-@mixin tablette-only {
-  @media only screen and (min-width: 765px) {
+@mixin tablette {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin phone {
+@mixin mobile {
   @media only screen and (max-width: 420px) {
     @content;
   }

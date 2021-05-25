@@ -1,4 +1,4 @@
-@import "./base/reset";
+@import "./base/_reset";
 @import "./utils/_variables";
 @import "./utils/_mixin";
 @import "./layout/_header";
@@ -7,4 +7,5 @@
 @import "./layout/_nav";
 @import "./pages/_home";
 @import "./pages/_menu";
-
+@import "./layout/_keyframes";
+@import "./layout/_animations";
