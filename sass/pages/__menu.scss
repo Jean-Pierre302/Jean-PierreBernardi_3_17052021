@@ -14,10 +14,20 @@ body {
 }
 
 h1 {
-  font-size: 1.5em;
-  line-height: 1;
+  display:flex;
+  margin:-0.5rem 0 0.5rem 2.5rem;
+  width:14rem;
+  font-size: 1.4em;
+  line-height: 1.2;
   font-weight: bold;
-}
+
+  }
+
+h2 {
+  font-size: 1.1em;
+  line-height: 1.1;
+  opacity:0.5;
+  }
 
 /*---------- Header -------------*/
 .menu__header {
@@ -59,7 +69,7 @@ header .couverture__image {
   z-index: -1;
 }
 
-header .couverture__image image {
+header .couverture__image img {
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -108,7 +118,7 @@ header .couverture__image image {
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     }
 }
 

@@ -1,5 +1,5 @@
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .nav__options {
     display: flex;
     justify-content: space-between;
@@ -38,7 +38,7 @@
     padding: 15px 0 15px 15px;
     width: 100%;
   }
-  .resto__img__header img {
+  .resto__image__header img {
     max-width: 200px;
     height: 200px;
   }

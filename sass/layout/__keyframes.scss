@@ -1,4 +1,4 @@
-/*-------- keyframes ----------*/
+//-------- keyframes ----------//
 
 @keyframes validation {
   0% {
@@ -25,9 +25,9 @@
   }
 }
 
-//Animation du checkbox //
+//Animation du controle //
 
-@keyframes checkbox {
+@keyframes animation-controle {
   0% {
     transform: translate(50px, 0);
   }
@@ -51,7 +51,7 @@
   }
 }
 
-@keyframes checkbox-contain {
+@keyframes animation-prix {
   0% {
     transform: translate(50px, 0);
   }
@@ -70,7 +70,7 @@
 }
 
 //Animation de page //
-@keyframes fadeIn {
+@keyframes fondu {
   from {
     transform: scale(0.1);
   }
@@ -80,14 +80,14 @@
   }
 }
 
-@keyframes spinloader {
+@keyframes animation-toupie {
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
 
-@keyframes loader {
+@keyframes animation-chargement {
   0% {
     transform: rotate(0deg);
   }
@@ -105,3 +105,12 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes animation-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform:rotate(360deg);
+    }
+  }

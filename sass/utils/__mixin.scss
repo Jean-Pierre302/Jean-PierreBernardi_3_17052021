@@ -11,17 +11,6 @@
   background: linear-gradient(#ff79da, #9356dc);
 }
 
-//-----------  Eclaircissement ------------------//
-@mixin eclaircir {
-  filter: brightness(150%);
-}
-
-//---------- Assombrissement --------------------//
-@mixin foncer {
-  filter: brightness(50%);
-}
-
-
 //------ Media queries différents écrans -------//
 
 @mixin bureau {

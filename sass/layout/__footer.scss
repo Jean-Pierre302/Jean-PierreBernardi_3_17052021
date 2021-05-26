@@ -1,14 +1,14 @@
 /*-------- Pied de page ----*/
 footer a {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 
 .footer {
   background: #333;
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: white;
   @include mobile {
   text-align: left;
   }

@@ -1,11 +1,14 @@
 @import "./base/_reset";
 @import "./utils/_variables";
 @import "./utils/_mixin";
-@import "./layout/_header";
-@import "./components/_buttons";
-@import "./layout/_footer";
-@import "./layout/_nav";
-@import "./pages/_home";
-@import "./pages/_menu";
 @import "./layout/_keyframes";
 @import "./layout/_animations";
+@import "./components/_buttons";
+@import "./layout/_header";
+@import "./pages/_accueil";
+@import "./layout/_nav";
+@import "./pages/_menu";
+@import "./layout/_footer";
+
+
+

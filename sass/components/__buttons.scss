@@ -1,4 +1,4 @@
-.reserver__bouton-1 {
+.reserver__bouton-explorer {
   display: inline-block;
   @include gradiant;
   text-decoration: none;
@@ -6,12 +6,12 @@
   border: 0;
   text-align: center;
   border-radius: 25px;
-  font-size: 15px;
+  font-size: 14px;
   color: white;
   @include ombre-primaire;
   font-weight: bold;
-  margin: 0 0.3em 0.3em 0;
-  padding: 15px 30px;
+  margin: 1.5rem 0.2rem 0.2rem 0;
+  padding: 0.7rem 1.4rem;
   transition: 0.2s;
   &:hover {
     background: linear-gradient(#f77dd4, #ab65fa);
