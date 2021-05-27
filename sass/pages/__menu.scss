@@ -14,15 +14,21 @@ body {
 }
 
 h1 {
-  display:bloc;
+  display:block;
   margin:-0.5rem 0 0.5rem 2.5rem;
   width:14rem;
   font-size: 1.4em;
   line-height: 1.2;
   font-weight: bold;
+  @include tablette {
+    display: block;
+    margin-left:auto;
+    font-size:1.4rem;
+    width:auto;
+    }
   @include bureau {
-    display: bloc;
-    margin-left:autorem;
+    display: block;
+    margin-left:auto;
     font-size:1.6rem;
     width:auto;
   }

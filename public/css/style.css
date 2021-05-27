@@ -391,7 +391,7 @@ img {
 }
 
 .chargement {
-  display: inline block;
+  display: inline-block;
   vertical-align: middle;
   width: 100px;
   left: 55%;
@@ -461,8 +461,8 @@ img {
   color: white;
   box-shadow: 0 5px 15px 0 #c3c3c3;
   font-weight: bold;
-  margin: 1.5rem 0.2rem 0.2rem 0;
   padding: 0.7rem 1.4rem;
+  margin: 2.2rem 0 1.2rem 0;
   transition: 0.2s;
 }
 .reserver__bouton-explorer:hover {
@@ -551,11 +551,17 @@ img {
     text-align: left;
     margin-left: 3rem;
     box-shadow: none;
+    border: none;
   }
 }
 .header__logo img {
   max-width: 100%;
   height: 1.6rem;
+}
+@media only screen and (min-width: 1025px) {
+  .header__logo img {
+    height: 2.5rem;
+  }
 }
 
 .rechercher__quartier {
@@ -570,7 +576,7 @@ img {
     padding: 3px;
     width: 50%;
     border-radius: 25px;
-    margin-right: 25px;
+    margin: 1rem 2rem;
   }
 }
 .rechercher__quartier .rechercher__pictogramme {
@@ -589,7 +595,7 @@ img {
 }
 @media only screen and (min-width: 1025px) {
   .rechercher__quartier .saisie-champs {
-    color: white;
+    color: black;
     padding: 5px 10px;
   }
 }
@@ -620,7 +626,8 @@ img {
 .reserver {
   flex: 100%;
   text-align: center;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 2.5rem;
+  letter-spacing: 0.03rem;
   background-color: #f2f2f2;
 }
 .reserver__bloc-titres {
@@ -641,7 +648,7 @@ article a {
 
 .resto {
   background-color: #f4f4f4;
-  padding: 10px;
+  padding: 20px 0;
   margin-top: 15px;
 }
 @media only screen and (min-width: 768px) {
@@ -673,7 +680,7 @@ article a {
   font-size: 22px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  margin-bottom: 18px;
+  margin: 15px 0 20px 10px;
   color: black;
 }
 @media only screen and (min-width: 768px) {
@@ -745,24 +752,24 @@ article a {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  margin: 10px 5px;
+  margin: 25px 5px;
 }
 .nav__mode {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 @media only screen and (min-width: 1025px) {
   .nav__mode {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 }
 .nav__options {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  margin: 1rem 0;
 }
 @media only screen and (min-width: 768px) {
   .nav__options {
@@ -780,11 +787,12 @@ article a {
   border-radius: 10px;
   text-align: justify;
   margin-left: 0;
+  margin-bottom: 1.7rem;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   color: black;
   font-weight: bold;
-  padding: 20px 15px;
+  padding: 1.4rem 1rem;
   box-shadow: 0 5px 15px 0 #c3c3c3;
 }
 .nav__bouton:hover {
@@ -798,6 +806,13 @@ article a {
   .nav__bouton {
     flex: 100%;
     margin-left: 20px;
+    padding: 10px 5px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .nav__bouton {
+    flex: 100%;
+    margin-left: 10px;
     padding: 10px 5px;
   }
 }
@@ -818,8 +833,10 @@ article a {
   .nav__pastilles {
     display: block;
     position: relative;
-    left: -12px;
-    top: -10px;
+    left: -6px;
+    margin-top: -6px;
+    height: 20px;
+    width: 20px;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -843,7 +860,7 @@ article a {
 }
 @media only screen and (min-width: 768px) {
   .nav__icones {
-    margin: -12px 15px 0 25px;
+    margin: -20px 0 0 25px;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -862,7 +879,7 @@ article a {
 @media only screen and (min-width: 768px) {
   .nav__texte {
     display: block;
-    text-align: right;
+    text-align: center;
     margin-top: -25px;
   }
 }
@@ -871,6 +888,7 @@ article a {
     text-align: center;
     font-size: 1.2rem;
     margin-top: -1rem;
+    margin-left: -0.9rem;
   }
 }
 
@@ -887,8 +905,8 @@ article a {
   color: white;
   box-shadow: 0 5px 15px 0 #c3c3c3;
   font-weight: bold;
-  margin: 1.5rem 0.2rem 0.2rem 0;
   padding: 0.7rem 1.4rem;
+  margin: 2.2rem 0 1.2rem 0;
   transition: 0.2s;
 }
 .reserver__bouton-explorer:hover {
@@ -1195,7 +1213,7 @@ article a {
 }
 
 .chargement {
-  display: inline block;
+  display: inline-block;
   vertical-align: middle;
   width: 100px;
   left: 55%;
@@ -1265,17 +1283,25 @@ body {
 }
 
 h1 {
-  display: bloc;
+  display: block;
   margin: -0.5rem 0 0.5rem 2.5rem;
   width: 14rem;
   font-size: 1.4em;
   line-height: 1.2;
   font-weight: bold;
 }
+@media only screen and (min-width: 768px) {
+  h1 {
+    display: block;
+    margin-left: auto;
+    font-size: 1.4rem;
+    width: auto;
+  }
+}
 @media only screen and (min-width: 1025px) {
   h1 {
-    display: bloc;
-    margin-left: autorem;
+    display: block;
+    margin-left: auto;
     font-size: 1.6rem;
     width: auto;
   }

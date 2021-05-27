@@ -10,8 +10,8 @@
   color: white;
   @include ombre-primaire;
   font-weight: bold;
-  margin: 1.5rem 0.2rem 0.2rem 0;
   padding: 0.7rem 1.4rem;
+  margin:2.2rem 0 1.2rem 0;
   transition: 0.2s;
   &:hover {
     background: linear-gradient(#f77dd4, #ab65fa);

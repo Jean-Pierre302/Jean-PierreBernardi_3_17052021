@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1680px;
-}
+ }
 
 %bloc {
   font-family: $text-font;
@@ -16,7 +16,8 @@
 .reserver {
   flex: 100%;
   text-align: center;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 2.5rem;
+  letter-spacing:0.03rem;
   background-color: $fond-primaire;
   &__bloc-titres {
     margin-bottom: 8rem;
@@ -40,9 +41,9 @@ article a {
 
 .resto {
   background-color: #f4f4f4;
-  padding: 10px;
+  padding: 20px 0;
   margin-top: 15px;
-  @include tablette {
+    @include tablette {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,9 +68,9 @@ article a {
     font-size: 22px;
     font-family: $text-font;
     font-weight: $fontWeight;
-    margin-bottom: 18px;
+    margin: 15px 0 20px 10px;
     color: black;
-    @include tablette {
+     @include tablette {
       padding: 15px 0 15px 15px;
       width: 100%;
     }
