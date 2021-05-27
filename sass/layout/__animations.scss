@@ -71,9 +71,9 @@
   animation: validation ease 0.5s 1;
 }
 
-@for $i from 1 through 15 {
+@for $i from 1 through 10 {
   .effet-#{$i} {
-    animation: fondu 0.4s * $i;
+    animation: fondu 0.5s * $i;
   }
 }
 

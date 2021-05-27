@@ -1,0 +1,21 @@
+{
+  "name": "projet3-JPBernardi",
+  "version": "1.0.0",
+  "description": "Ohmyfood! entreprise de commande de repas en ligne",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jean-Pierre302/Jean-PierreBernardi_3_17052021.git"
+  },
+  "author": "Jean-Pierre Bernardi",
+  "license": "ISC",
+  "browserslist": "last 3 versions",
+  "bugs": {
+    "url": "https://github.com/Jean-Pierre302/Jean-PierreBernardi_3_17052021.git/issues"
+  },
+  "homepage": "https://github.com/Jean-Pierre302/Jean-PierreBernardi_3_17052021.git,
+}

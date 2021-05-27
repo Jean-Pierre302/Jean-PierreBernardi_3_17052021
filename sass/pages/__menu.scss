@@ -14,19 +14,27 @@ body {
 }
 
 h1 {
-  display:flex;
+  display:bloc;
   margin:-0.5rem 0 0.5rem 2.5rem;
   width:14rem;
   font-size: 1.4em;
   line-height: 1.2;
   font-weight: bold;
+  @include bureau {
+    display: bloc;
+    margin-left:autorem;
+    font-size:1.6rem;
+    width:auto;
+  }
 
   }
 
 h2 {
   font-size: 1.1em;
   line-height: 1.1;
-  opacity:0.5;
+  @include bureau {
+    text-align:center;
+  }
   }
 
 /*---------- Header -------------*/
@@ -93,12 +101,13 @@ header .couverture__image img {
 .menu__resto {
   font-family: $logo-title-font;
   font-weight: bold;
-  letter-spacing:0.1rem;
-  padding-top:1.5rem;
-  margin-left:1.5rem;
+  letter-spacing:0.05rem;
+  font-size:1.35rem;
+  padding-top:1.6rem;
+  margin-left:1.4rem;
+  margin-bottom:-0.5rem;
   @include bureau {
   text-align: center;
-  font-size:1.5rem;
   }
 }
 
@@ -161,10 +170,18 @@ header .couverture__image img {
   }
 }
 
+h3 {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+  @extend %text-overflow;
+ }
+
 h4 {
   color: #333;
   font-size: 0.75rem;
   font-weight: normal;
+  opacity:0.7;
   @extend %text-overflow;
  }
 

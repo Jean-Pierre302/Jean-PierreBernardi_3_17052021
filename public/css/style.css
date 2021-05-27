@@ -307,63 +307,43 @@ img {
 }
 
 .effet-1 {
-  animation: fondu 0.4s;
+  animation: fondu 0.5s;
 }
 
 .effet-2 {
-  animation: fondu 0.8s;
+  animation: fondu 1s;
 }
 
 .effet-3 {
-  animation: fondu 1.2s;
+  animation: fondu 1.5s;
 }
 
 .effet-4 {
-  animation: fondu 1.6s;
-}
-
-.effet-5 {
   animation: fondu 2s;
 }
 
+.effet-5 {
+  animation: fondu 2.5s;
+}
+
 .effet-6 {
-  animation: fondu 2.4s;
+  animation: fondu 3s;
 }
 
 .effet-7 {
-  animation: fondu 2.8s;
+  animation: fondu 3.5s;
 }
 
 .effet-8 {
-  animation: fondu 3.2s;
-}
-
-.effet-9 {
-  animation: fondu 3.6s;
-}
-
-.effet-10 {
   animation: fondu 4s;
 }
 
-.effet-11 {
-  animation: fondu 4.4s;
+.effet-9 {
+  animation: fondu 4.5s;
 }
 
-.effet-12 {
-  animation: fondu 4.8s;
-}
-
-.effet-13 {
-  animation: fondu 5.2s;
-}
-
-.effet-14 {
-  animation: fondu 5.6s;
-}
-
-.effet-15 {
-  animation: fondu 6s;
+.effet-10 {
+  animation: fondu 5s;
 }
 
 .toupie {
@@ -506,7 +486,7 @@ img {
 }
 .coeur i {
   color: #9d9d9d;
-  font-size: 24px;
+  font-size: 20px;
   left: 50%;
 }
 .coeur .hover-icones {
@@ -533,7 +513,8 @@ img {
 /*------------ bouton de commande ---------------*/
 .bouton-2 {
   margin-top: 25px;
-  width: 60%;
+  width: 45%;
+  height: 90%;
 }
 @media only screen and (min-width: 768px) {
   .bouton-2 {
@@ -822,15 +803,15 @@ article a {
 }
 .nav__pastilles {
   position: absolute;
-  left: 0.9rem;
-  margin-top: -5px;
+  left: 0.5rem;
+  margin-top: -4px;
   background: #9356dc;
   border-radius: 100%;
   color: white;
-  height: 1.2rem;
-  width: 1.2rem;
-  line-height: 1.62;
-  padding: 2px 10px;
+  height: 20px;
+  width: 20px;
+  line-height: 1.6;
+  padding: 2px 7px;
   font-weight: bold;
 }
 @media only screen and (min-width: 768px) {
@@ -838,7 +819,17 @@ article a {
     display: block;
     position: relative;
     left: -12px;
-    top: 10px;
+    top: -10px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .nav__pastilles {
+    display: block;
+    position: relative;
+    left: 4px;
+    top: 8px;
+    height: 22px;
+    width: 22px;
   }
 }
 .nav__icones {
@@ -855,10 +846,17 @@ article a {
     margin: -12px 15px 0 25px;
   }
 }
+@media only screen and (min-width: 1025px) {
+  .nav__icones {
+    margin: -10px 0 0 3rem;
+  }
+}
 .nav__texte {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 3rem;
+  margin-top: -0.2rem;
   font-size: 0.8rem;
 }
 @media only screen and (min-width: 768px) {
@@ -914,7 +912,7 @@ article a {
 }
 .coeur i {
   color: #9d9d9d;
-  font-size: 24px;
+  font-size: 20px;
   left: 50%;
 }
 .coeur .hover-icones {
@@ -941,7 +939,8 @@ article a {
 /*------------ bouton de commande ---------------*/
 .bouton-2 {
   margin-top: 25px;
-  width: 60%;
+  width: 45%;
+  height: 90%;
 }
 @media only screen and (min-width: 768px) {
   .bouton-2 {
@@ -1112,63 +1111,43 @@ article a {
 }
 
 .effet-1 {
-  animation: fondu 0.4s;
+  animation: fondu 0.5s;
 }
 
 .effet-2 {
-  animation: fondu 0.8s;
+  animation: fondu 1s;
 }
 
 .effet-3 {
-  animation: fondu 1.2s;
+  animation: fondu 1.5s;
 }
 
 .effet-4 {
-  animation: fondu 1.6s;
-}
-
-.effet-5 {
   animation: fondu 2s;
 }
 
+.effet-5 {
+  animation: fondu 2.5s;
+}
+
 .effet-6 {
-  animation: fondu 2.4s;
+  animation: fondu 3s;
 }
 
 .effet-7 {
-  animation: fondu 2.8s;
+  animation: fondu 3.5s;
 }
 
 .effet-8 {
-  animation: fondu 3.2s;
-}
-
-.effet-9 {
-  animation: fondu 3.6s;
-}
-
-.effet-10 {
   animation: fondu 4s;
 }
 
-.effet-11 {
-  animation: fondu 4.4s;
+.effet-9 {
+  animation: fondu 4.5s;
 }
 
-.effet-12 {
-  animation: fondu 4.8s;
-}
-
-.effet-13 {
-  animation: fondu 5.2s;
-}
-
-.effet-14 {
-  animation: fondu 5.6s;
-}
-
-.effet-15 {
-  animation: fondu 6s;
+.effet-10 {
+  animation: fondu 5s;
 }
 
 .toupie {
@@ -1286,18 +1265,30 @@ body {
 }
 
 h1 {
-  display: flex;
+  display: bloc;
   margin: -0.5rem 0 0.5rem 2.5rem;
   width: 14rem;
   font-size: 1.4em;
   line-height: 1.2;
   font-weight: bold;
 }
+@media only screen and (min-width: 1025px) {
+  h1 {
+    display: bloc;
+    margin-left: autorem;
+    font-size: 1.6rem;
+    width: auto;
+  }
+}
 
 h2 {
   font-size: 1.1em;
   line-height: 1.1;
-  opacity: 0.5;
+}
+@media only screen and (min-width: 1025px) {
+  h2 {
+    text-align: center;
+  }
 }
 
 /*---------- Header -------------*/
@@ -1366,14 +1357,15 @@ header .couverture__image img {
 .menu__resto {
   font-family: "Shrikhand", cursive;
   font-weight: bold;
-  letter-spacing: 0.1rem;
-  padding-top: 1.5rem;
-  margin-left: 1.5rem;
+  letter-spacing: 0.05rem;
+  font-size: 1.35rem;
+  padding-top: 1.6rem;
+  margin-left: 1.4rem;
+  margin-bottom: -0.5rem;
 }
 @media only screen and (min-width: 1025px) {
   .menu__resto {
     text-align: center;
-    font-size: 1.5rem;
   }
 }
 
@@ -1423,7 +1415,7 @@ header .couverture__image img {
   }
 }
 
-.menu__resto__prix, h4, .produit {
+.menu__resto__prix, h4, h3, .produit {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1439,10 +1431,17 @@ header .couverture__image img {
   }
 }
 
+h3 {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
 h4 {
   color: #333;
   font-size: 0.75rem;
   font-weight: normal;
+  opacity: 0.7;
 }
 
 .menu__resto__prix {
