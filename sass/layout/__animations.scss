@@ -58,7 +58,7 @@
   max-width: 50px;
   overflow: hidden;
   animation: animation-controle ease 0.3s;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   animation-iteration-count: 1;
   transform-origin: 50% 50%;
 }
@@ -78,7 +78,7 @@
 }
 
 .toupie {
-  animation: animation-toupie 3s;
+  animation: animation-toupie 2s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   background: $animation-couleur-fond;

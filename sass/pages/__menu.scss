@@ -20,14 +20,18 @@ h1 {
   font-size: 1.4em;
   line-height: 1.2;
   font-weight: bold;
+
+  @include mobile-paysage {
+    margin-left:auto;
+    font-size:1.4em;
+    width:auto;
+    }
   @include tablette {
-    display: block;
     margin-left:auto;
     font-size:1.4rem;
     width:auto;
     }
   @include bureau {
-    display: block;
     margin-left:auto;
     font-size:1.6rem;
     width:auto;
@@ -41,7 +45,11 @@ h2 {
   @include bureau {
     text-align:center;
   }
+
+  @include mobile-paysage {
+    text-align:center;
   }
+}
 
 /*---------- Header -------------*/
 .menu__header {
@@ -114,6 +122,7 @@ header .couverture__image img {
   margin-bottom:-0.5rem;
   @include bureau {
   text-align: center;
+  margin-bottom:1.5rem;
   }
 }
 
@@ -141,6 +150,7 @@ header .couverture__image img {
   margin: 30px 0 10px 10px;
   font-size: 0.85rem;
   text-transform: uppercase;
+  letter-spacing:0.3rem;
   @include bureau {
     margin:0;
     font-size: 0.75rem;
