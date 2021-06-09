@@ -2,29 +2,35 @@
 footer a {
   text-decoration: none;
   color: white;
+  
 }
 
 .footer {
   background: #333;
   padding: 20px;
-   text-align: center;
+  text-align: center;
   color: white;
   @include mobile {
   text-align: left;
   }
 
   &__logo {
-    filter: invert(1);
-    max-width: 150px;
-    @include tablette {
-      max-width: none;
+    max-width:auto;
+    filter: invert(100%);
+    @include mobile {
+    filter: invert(100%);
+    max-width: 8rem;
+    transform:scale(0.75);
+    margin-left:-1rem;
+
     }
   }
   &__lien {
-    text-align: left;
-    @include tablette {
-      text-align: center;
-    }
+    text-align: center;
+    @include mobile {
+      text-align: left;
+      margin:auto;
+          }
   }
 }
 

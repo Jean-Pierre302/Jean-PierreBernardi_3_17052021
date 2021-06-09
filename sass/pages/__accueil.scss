@@ -45,7 +45,7 @@ article a {
   margin-top: 15px;
     @include tablette {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-flow: wrap;
     padding: 15px;
@@ -65,14 +65,18 @@ article a {
       }
   }
   &__mode {
-    font-size: 22px;
+    padding: 15px 0 15px 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  @include mobile {
+    font-size: 1.2rem;
     font-family: $text-font;
     font-weight: $fontWeight;
-    margin: 15px 0 20px 10px;
     color: black;
-     @include tablette {
-      padding: 15px 0 15px 15px;
-      width: 100%;
+    text-align: left;
+    margin-top:0.5rem;
+    margin-bottom:-0.8rem;
     }
   }
   &__image__header {
