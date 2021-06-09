@@ -5,16 +5,16 @@
   display: flex;
   justify-content: space-between;
   background: white;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   cursor: pointer;
   @include ombre-primaire;
-  margin: 10px 0;
+  margin: 0.7rem 0;
   flex: 1 0 33%;
   overflow: hidden;
 
   @include bureau {
     flex: 25%;
-    margin-left: 15px;
+    margin-left: 1rem;
   }
 
   &:hover {
@@ -25,20 +25,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 17px;
+    font-size: 1.1rem;
     font-weight: bold;
-    margin-top: 18px;
-    padding-right: 10px;
+    margin-top: 1.2rem;
+    padding-right: 0.7rem;
     text-align: right;
   }
   .controle {
     display: none;
     width: 30%;
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
   .bouton-plat {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: white;
     transform: rotate(360deg);
   }
@@ -48,14 +48,14 @@
   animation: animation-prix ease 0.3s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  min-width: 50px;
+  min-width: 3rem;
 }
 
 .menu__texte:hover .controle {
   display: block;
   flex: 0 0 15%;
   background: $couleur-tertiaire;
-  max-width: 50px;
+  max-width: 3rem;
   overflow: hidden;
   animation: animation-controle ease 0.3s;
   animation-fill-mode: both;
@@ -71,14 +71,16 @@
   animation: validation ease 0.5s 1;
 }
 
+// boucle pour obtenir 10 différents effets lié au temps d'animation // 
 @for $i from 1 through 10 {
   .effet-#{$i} {
     animation: fondu 0.5s * $i;
   }
 }
 
+// module animation chargement de la page accueil//
 .toupie {
-  animation: animation-toupie 2s;
+  animation: animation-toupie 1s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   background: $animation-couleur-fond;
@@ -100,10 +102,10 @@
 %activite-avant {
   display: inline-block;
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-  top: 15px;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: 1rem;
   border-radius: 50%;
   border: 2px solid transparent;
   border-top-color: $couleur-secondaire;
@@ -111,10 +113,10 @@
 %activite-apres {
   display: inline-block;
   position: absolute;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
-  top: 5px;
+  bottom: 0.4rem;
+  left: 0.4rem;
+  right: 0.4rem;
+  top: 0.4rem;
   border-radius: 50%;
   border: 2px solid transparent;
   border-top-color: $couleur-secondaire;
@@ -123,12 +125,12 @@
 .chargement {
   display:inline-block;
   vertical-align: middle;
-  width: 100px;
+  width: 6.5rem;
   left: 55%;
   border:solid 2vmin transparent;
   border-radius:50%;
   overflow: hidden;
-  padding: 10px;
+  padding: 0.7rem;
   border-right-color:$couleur-primaire;
   border-top-color:$couleur-primaire;
   animation:spin 1s infinite linear;
