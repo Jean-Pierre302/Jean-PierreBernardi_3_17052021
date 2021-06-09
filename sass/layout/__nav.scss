@@ -3,17 +3,31 @@
 .nav {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 1rem;
   margin: 25px 5px;
-  &__mode {
+   &__mode {
     font-size: 1.35rem;
-    font-weight: $fontWeight;
-    font-family: $text-font;
+    font-weight: $police-style;
+    font-family: $police-texte;
     margin-bottom: 0.9rem;
-    @include bureau {
-    font-size: 1.5rem;
-    text-align: center;
-        }
+      @include mobile {
+      text-align: left;
+      }
+      @include tablette {
+      font-size: 1.4rem;
+      text-align: center;
+      } 
+      @include bureau {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-left:2rem;
+    }
+      @include portable {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom:3rem;
+
+    }
   }
 
   %backgroundgradient {
@@ -22,31 +36,33 @@
     background-clip: text;
   }
   &__options {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-      @include tablette {
-      display: flex;
+display: flex;
       justify-content: space-around;
       flex-direction: row;
-      width: 100%;
+      width: auto;
+      @include mobile {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8rem 0;
+    text-align: center;
     }
+      
   }
   &__bouton {
     flex: 1 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
     text-decoration: none;
     background: $fond-primaire;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: justify;
-    margin-left: 0;
-    margin-bottom:1.7rem;
+    margin-left:0;
+    margin-bottom:1.8rem;
     font-size: 12px;
-    font-family: $text-font;
+    font-family: $police-texte;
     color: black;
-    font-weight: $fontWeight;
-    padding: 1.4rem 1rem;
-    @include ombre-primaire;
+    font-weight: $police-style;
+    padding: 1.5rem 1rem;
+      @include ombre-primaire;
       &:hover {
       background: #f2eafb;
       box-shadow: 2px 2px 10px 2px #e4d5f6;
@@ -54,21 +70,15 @@
         color: $couleur-primaire;
       }
     }
-    @include tablette {
-      flex: 100%;
-      margin-left: 20px;
-      padding: 10px 5px;
-    }
     @include bureau {
-      flex: 100%;
-      margin-left: 10px;
-      padding: 10px 5px;
-      }
+     margin: 3.5rem;
+     } 
+
+     @include tablette {
+     margin: 1.5rem;
+     }     
   }
     &__pastilles {
-      position: absolute;
-      left: 0.5rem;
-      margin-top: -4px;
       background: $couleur-primaire;
       border-radius: 100%;
       color: white;
@@ -76,24 +86,21 @@
       width: 20px;
       line-height: 1.60;
       padding: 2px 7px;
-      font-weight: $fontWeight;
-        @include tablette {
+      font-weight: 600;
         display: block;
         position: relative;
-        left: -6px;
-        margin-top: -6px;
-        height: 20px;
-        width: 20px;
-        }
-        @include bureau {
-        display: block;
-        position: relative;
-        left: 4px;
-        top: 8px;
-        height: 22px;
-        width: 22px;
-        }
-  }
+        line-height: 1.20;
+        left: -1rem;
+        height: 1.1rem;
+        width: 1.1rem;
+        margin: -0.8rem 0 0 -0.5rem;
+      @include mobile {
+      position: absolute;
+      left: 1.2rem;
+      margin-top: -4px;
+      }
+
+}
     &__icones {
       display: flex;
       align-items: center;
@@ -103,31 +110,41 @@
       position: absolute;
       font-size: 16px;
         @include tablette {
-        margin: -20px 0  0 25px;
+        margin: -1rem 0 0 0.25rem;
         }
         @include bureau {
-        margin: -10px 0 0 3rem;
+        margin: -1.1rem 0 0 0.75rem;
+        }
+
+        @include portable {
+        margin: -1.1rem 0 0 0.55rem;
         }
   }
+
   &__texte {
+  display: block;
+      text-align: center;
+      margin: -1.3rem 0; 
+      font-size: 1.15rem;
+  
+  @include mobile {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-left:3rem;
     margin-top:-0.2rem;
     font-size: 0.8rem;
-
-     @include tablette {
-      display: block;
-      text-align: center;
-      margin-top: -25px;
-    }
-      @include bureau {
-      text-align:center;
-      font-size: 1.2rem;
-      margin-top: -1rem;
-      margin-left:-0.9rem;
-    }
-
   }
+
+  @include tablette {
+     font-size: .9rem;
+     margin-left:2rem;
+     margin-top:-1rem;
+  }
+
+  @include bureau {
+     font-size: 1.25rem;
+     margin-top:-1.5rem;
+    }
+}
 }

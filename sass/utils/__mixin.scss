@@ -14,21 +14,29 @@
 //------ Media queries différents écrans -------//
 
 @mixin bureau {
-  @media only screen and (min-width: 1025px) {
+  @media all and (min-width: 1024px) {
     @content;
   }
 }
+
+@mixin portable {
+  @media all and (min-width: 960px) {
+    @content;
+  }
+}
+
 @mixin tablette {
-  @media only screen and (min-width: 768px) {
+  @media all and (min-width: 760px) and (max-width: 959.98px) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media only screen and (max-width: 420px) {
+  @media all and (max-width: 759.98px) {
     @content;
   }
 }
+
 
 
 

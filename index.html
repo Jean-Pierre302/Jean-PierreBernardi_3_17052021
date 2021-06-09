@@ -1,155 +1,157 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head><!--1/6/21-->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>OhMyFood! &trade; &#124; Repas en Ligne Paris</title>
-  <meta name="description" content="Bienvenue chez OhMyFood votre s&acute;lection de restaurants à Paris"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="images/logo/ohmyfood.svg" type="image/x-icon"/>
-  <link rel="stylesheet" href="public/css/style.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300&display=swap"/><script src="https://kit.fontawesome.com/6a824a900d.js" crossorigin="anonymous"></script>
-</head>
-<body class="main">
-  <div class="toupie">
-    <div class="chargement"></div>
-  </div> 
-  <header class="header">       
-    <div class="header__logo">
-      <a href="index.html">
-        <img src="images/logo/ohmyfood.svg" alt="ohmyfood logo" />
-      </a>
-    </div>
-    <form class="rechercher__quartier">
-      <div class="rechercher__pictogramme">
-        <i class="fas fa-map-marker-alt quartier"></i>
-      </div>
-      <div class="saisie">
-        <input class="saisie-champs" type="text" placeholder="Paris, Belleville"/>
-      </div>
-    </form>
-  </header>
-  <main>
-    <article class="reserver effet-1">
-      <bloc-titres class="reserver__bloc_titres">
-        <h1>R&eacute;servez le menu qui vous convient</h1>
-        <h2>D&eacute;couvrez des restaurants d'exception, s&eacute;lectionn&eacute;s par nos soins.</h2>
-      </bloc-titres>
-      <a href="" class="reserver__bouton-explorer"> Explorer nos restaurants </a>
-    </article>
-    <nav class="nav"><!--Menu des choix-->
-      <h2 class="nav__mode">Fonctionnement</h2>
-      <div class="nav__options">
-        <a href="#resto" class="nav__bouton effet-1">
-          <span class="nav__pastilles">1</span>
-          <span class="nav__icones"><i class="fas fa-mobile-alt"></i></span>
-          <span class="nav__texte">Choisissez un restaurant</span>
-        </a>
-        <a href="#" class="nav__bouton effet-1">
-          <span class="nav__pastilles">2</span>
-          <span class="nav__icones"><i class="fas fa-list"></i></span>
-          <span class="nav__texte">Composez un menu</span>
-        </a>
-        <a href="#" class="nav__bouton effet-1">
-          <span class="nav__pastilles">3</span>
-          <span class="nav__icones"><i class="fas fa-store"></i></span>
-          <span class="nav__texte">D&eacute;gustez au restaurant</span>
+  <!DOCTYPE html>
+  <html lang="fr">
+  <head><!--9/6/2021-16h30-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>OhMyFood! Paris</title>
+    <meta name="description" content="Bienvenue chez OhMyFood votre s&acute;lection de restaurants à Paris"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+    <link rel="shortcut icon" href="images/logo/ohmyfood.svg" type="image/x-icon"/>
+    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300&display=swap"/> 
+    <script src="https://kit.fontawesome.com/18ac38c636.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="main">
+    <div class="toupie">
+      <div class="chargement"></div>
+    </div> 
+    <header class="header">       
+      <div class="header__logo">
+        <a href="index.html">
+          <img src="images/logo/ohmyfood.svg" alt="ohmyfood logo" />
         </a>
       </div>
-    </nav>
-    <section>
-      <div class="resto">
-        <h2 class="resto__mode effet-2">Restaurants</h2>
-        <article class="resto__fiche">
-          <a href="La_palette_du_gout.html">
-            <figure class="resto__image__header effet-2">
-              <img src="./images/restaurants/la_palette_du_gout.jpg" alt="La palette du goût" />
-              <figcaption class="nouveau">Nouveau</figcaption>
-            </figure>
-            <header class="resto__detail">
-              <bloc-titres>
-                <h3 class="libelle">La palette du go&ucirc;t</h3>
-                <h4 class="libelle">M&eacute;nilmontant</h4>
-              </bloc-titres>
-              <div class="coeur">
-                <i class="far fa-heart defaut-icones"></i>
-                <i class="fas fa-heart hover-icones"></i>
-              </div>
-            </header>
+      <form class="rechercher__quartier">
+        <div class="rechercher__pictogramme">
+          <i class="fas fa-map-marker-alt quartier"></i>
+        </div>
+        <div class="saisie">
+          <input class="saisie-champs" type="text" placeholder="Paris, Belleville"/>
+        </div>
+      </form>
+    </header>
+    <main>
+      <article class="reserver effet-1">
+        <bloc-titres class="reserver__bloc_titres">
+          <h1>R&eacute;servez le menu qui vous convient</h1>
+          <h2>D&eacute;couvrez des restaurants d'exception, s&eacute;lectionn&eacute;s par nos soins.</h2>
+        </bloc-titres>
+        <a href="" class="reserver__bouton-explorer"> Explorer nos restaurants </a>
+      </article>
+      <nav class="nav"><!--Menu des choix-->
+        <h2 class="nav__mode">Fonctionnement</h2>
+        <div class="nav__options">
+          <a href="#resto__mode" class="nav__bouton effet-1">
+            <span class="nav__pastilles">1</span>
+            <span class="nav__icones"><i class="fas fa-mobile-alt"></i></span>
+            <span class="nav__texte">Choisissez un restaurant</span>
           </a>
-        </article>
-        <article class="resto__fiche">
-          <a href="La_note_enchantee.html">
-            <figure class="resto__image__header effet-3">
-              <img src="./images/restaurants/la_note_enchantee.jpg" alt="La note enchant&eacute;e"/>
-              <figcaption class="nouveau">Nouveau</figcaption>
-            </figure>
-            <header class="resto__detail">
-              <bloc-titres>
-                <h3 class="libelle">La note enchant&eacute;e</h3>
-                <h4 class="libelle">Charonne</h4>
-              </bloc-titres>
-              <div class="coeur">
-                <i class="far fa-heart defaut-icones"></i>
-                <i class="fas fa-heart hover-icones"></i>
-              </div>
-            </header>
+          <a href="#" class="nav__bouton effet-2">
+            <span class="nav__pastilles">2</span>
+            <span class="nav__icones"><i class="fas fa-list"></i></span>
+            <span class="nav__texte">Composez un menu</span>
           </a>
-        </article>
-        <article class="resto__fiche">
-          <a href="A_la_Francaise.html">
-            <figure class="resto__image__header effet-4">
-              <img src="./images/restaurants/a_la_francaise.jpg" alt="Restaurant A la fran&ccedil;aise"/>
-            </figure>
-            <header class="resto__detail">
-              <bloc-titres>
-                <h3 class="libelle">A la fran&ccedil;aise</h3>
-                <h4 class="libelle">Cit&eacute; Rouge</h4>
-              </bloc-titres>
-              <div class="coeur">
-                <i class="far fa-heart defaut-icones"></i>
-                <i class="fas fa-heart hover-icones"></i>
-              </div>
-            </header>
+          <a href="#" class="nav__bouton effet-3">
+            <span class="nav__pastilles">3</span>
+            <span class="nav__icones"><i class="fas fa-store"></i></span>
+            <span class="nav__texte">D&eacute;gustez au restaurant</span>
           </a>
-        </article>
-        <article class="resto__fiche">
-          <a href="Le_delice_des_sens.html">
-            <figure class="resto__image__header effet-5">
-              <img src="./images/restaurants/le_delice_des_sens.jpg" alt="Le d&eacute;lice des sens"/>
-            </figure>
-            <header class="resto__detail">
-              <bloc-titres>
-                <h3 class="libelle">Le d&eacute;lice des sens</h3>
-                <h4 class="libelle-2">Folie-M&eacute;ricourt</h4>
-              </bloc-titres>
-              <div class="coeur">
-                <i class="far fa-heart defaut-icones"></i>
-                <i class="fas fa-heart hover-icones"></i>
-              </div>
-            </header>
-          </a>
-        </article>
+        </div>
+      </nav>
+      <section>
+        <div class="resto">
+          <h2 class="resto__mode effet-1">Restaurants</h2>
+          <article class="resto__fiche">
+            <a href="La_palette_du_gout.html">
+              <figure class="resto__image__header effet-2">
+                <img src="./images/restaurants/la_palette_du_gout.jpg" alt="La palette du goût" />
+                <figcaption class="nouveau">Nouveau</figcaption>
+              </figure>
+              <header class="resto__detail">
+                <bloc-titres>
+                  <h3 class="libelle-resto">La palette du go&ucirc;t</h3>
+                  <h4 class="libelle-lieu">M&eacute;nilmontant</h4>
+                </bloc-titres>
+                <div class="coeur">
+                  <i class="far fa-heart defaut-icones"></i>
+                  <i class="fas fa-heart hover-icones"></i>
+                </div>
+              </header>
+            </a>
+          </article>
+          <article class="resto__fiche">
+            <a href="La_note_enchantee.html">
+              <figure class="resto__image__header effet-1">
+                
+                <img src="./images/restaurants/la_note_enchantee.jpg" alt="La note enchant&eacute;e"/>
+                <figcaption class="nouveau">Nouveau</figcaption>
+              </figure>
+              <header class="resto__detail">
+                <bloc-titres>
+                  <h3 class="libelle-resto">La note enchant&eacute;e</h3>
+                  <h4 class="libelle-lieu">Charonne</h4>
+                </bloc-titres>
+                <div class="coeur">
+                  <i class="far fa-heart defaut-icones"></i>
+                  <i class="fas fa-heart hover-icones"></i>
+                </div>
+              </header>
+            </a>
+          </article>
+          <article class="resto__fiche">
+            <a href="A_la_Francaise.html">
+              <figure class="resto__image__header effet-1">
+                <img src="./images/restaurants/a_la_francaise.jpg" alt="Restaurant A la fran&ccedil;aise"/>
+              </figure>
+              <header class="resto__detail">
+                <bloc-titres>
+                  <h3 class="libelle-resto">A la fran&ccedil;aise</h3>
+                  <h4 class="libelle-lieu">Cit&eacute; Rouge</h4>
+                </bloc-titres>
+                <div class="coeur">
+                  <i class="far fa-heart defaut-icones"></i>
+                  <i class="fas fa-heart hover-icones"></i>
+                </div>
+              </header>
+            </a>
+          </article>
+          <article class="resto__fiche">
+            <a href="Le_delice_des_sens.html">
+              <figure class="resto__image__header effet-1">
+                <img src="./images/restaurants/le_delice_des_sens.jpg" alt="Le d&eacute;lice des sens"/>
+              </figure>
+              <header class="resto__detail">
+                <bloc-titres>
+                  <h3 class="libelle-resto">Le d&eacute;lice des sens</h3>
+                  <h4 class="libelle-lieu">Folie-M&eacute;ricourt</h4>
+                </bloc-titres>
+                <div class="coeur">
+                  <i class="far fa-heart defaut-icones"></i>
+                  <i class="fas fa-heart hover-icones"></i>
+                </div>
+              </header>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer effet-1">
+        <div class="footer__logo">
+          <img src="images/logo/ohmyfood.svg" alt="logo footer" />
+        </div>
+        <div class="footer">
+          <ul>
+            <li><a href="#"><i class="fas fa-utensils footer-icones"></i>&nbsp;Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping footer-icones"></i>Devenir partenaire</a></li>
+            <li><a href="#"><i class="fas fa-edit footer-icones"></i>Mentions l&eacute;gales</a></li>
+            <li><a href="mailto:resa@ohmyfood.local"><i class="fas fa-envelope footer-icones"></i>Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="footer effet-1">
-      <div class="footer__logo">
-        <img src="images/logo/ohmyfood.svg" alt="logo footer" />
-      </div>
-      <div class="footer__lien">
-        <ul class="footer__lien">
-          <li><a href="#"><i class="fas fa-utensils footer-icones"></i>Proposer un restaurant</a></li>
-          <li><a href="#"><i class="fas fa-hands-helping footer-icones"></i>Devenir partenaire</a></li>
-          <li><a href="#">Mentions l&eacute;gales</a></li>
-          <li><a href="mailto:resa@ohmyfood.local">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  
-</body>
-</html>
+      </footer>
+    </body>
+  </html>

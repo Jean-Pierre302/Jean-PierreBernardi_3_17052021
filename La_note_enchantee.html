@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head><!--30/5/2021-->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>La note enchant&eacute;e</title>
   <meta name="description" content="Restaurant gastronomique La note enchant&eacute;e" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
   <link rel="shortcut icon" href="images/logo/ohmyfood.svg" type="image/x-icon"/>
   <link rel="stylesheet" href="public/css/style.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300&display=swap"/> 
-  <script src="https://kit.fontawesome.com/6a824a900d.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/18ac38c636.js" crossorigin="anonymous"></script>
 </head>
 <body class="menu">
   <header class="menu__header">
@@ -25,8 +25,9 @@
       </div>
       
       <figure class="couverture__image">
-        <img src="./images/restaurants/La_note_enchantee.jpg" alt="La note enchant&eacute;e"/>
-      </figure>
+        <img src="./images/restaurants/la_note_enchantee.jpg" alt="La note enchant&eacute;e"/>
+        
+    </figure>
     </header>
     <main class="fond-resto">
       <div class="menu__choix">
@@ -41,7 +42,7 @@
           <h2 class="carte__resto">Entr&eacute;es</h2>
           <article class="menu__texte effet-1">
             <div class="menu__resto__prix">
-              <span class="produit">Ravioles de foie gras </span>
+              <h3>Ravioles de foie gras </h3>
               <h4>Accompagn&eacute;s de leur cr&egrave;me &agrave; la truffe</h4>
             </div>
             <div class="prix__fiche">
@@ -51,9 +52,9 @@
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
           </article>
-          <div class="menu__texte effet-1">
+          <article class="menu__texte effet-1">
             <div class="menu__resto__prix">
-              <span class="produit"> Caviar osci&egrave;tre</span>
+              <h3> Caviar osci&egrave;tre</h3>
               <h4>Sur blini &agrave; la farine de bl&eacute; noir</h4>
             </div>
             <div class="prix__fiche">
@@ -64,10 +65,10 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-          <div class="menu__texte effet-1">
+          </article>
+          <article class="menu__texte effet-1">
             <div class="menu__resto__prix">
-              <span class="produit">Homard et espuma de potiron </span>
+              <h3>Homard et espuma de potiron </h3>
               <h4>Marin&eacute; aux zestes d&apos;orange</h4>
             </div>
             <div class="prix__fiche">
@@ -78,11 +79,10 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-        </div>
-        <div class="menu__texte effet-1">
+          </article>
+          <article class="menu__texte effet-1">
           <div class="menu__resto__prix">
-            <span class="produit">Foie gras de canard cuit entier </span>
+            <h3>Foie gras de canard cuit entier </h3>
             <h4>Confiture de figue et pain toast&eacute;</h4>
           </div>
           <div class="prix__fiche">
@@ -93,14 +93,19 @@
           <div class="controle">
             <i class="fas fa-check-circle bouton-plat"></i>
           </div>
+        </article> 
+        <div class="menu__texte menu-cache">
+          <div class="menu__resto__prix"></div>
         </div>
-        
-        
+        <div class="menu__texte menu-cache">
+          <div class="menu__resto__prix"></div>
+        </div>
+        </div>    
         <div class="menu__details">
           <h2 class="carte__resto">Plats&emsp;</h2>
-          <div class="menu__texte effet-5">
+          <article class="menu__texte effet-5">
             <div class="menu__resto__prix">
-              <span class="produit">Noix de coquilles Saint-Jacques </span>
+              <h3>Noix de coquilles Saint-Jacques </h3>
               <h4>Sur lit de pur&eacute;e de c&eacute;leri-rave</h4>
             </div>
             <div class="prix__fiche">
@@ -111,10 +116,10 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-          <div class="menu__texte effet-5">
+          </article>
+          <article class="menu__texte effet-5">
             <div class="menu__resto__prix">
-              <span class="produit"> Langoustine poêl&eacute;e </span>
+              <h3> Langoustine poêl&eacute;e </h3>
               <h4>Pur&eacute;e de patate douce</h4>
             </div>
             <div class="prix__fiche">
@@ -125,10 +130,10 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-          <div class="menu__texte effet-5">
+          </article>
+          <article class="menu__texte effet-5">
             <div class="menu__resto__prix">
-              <span class="produit">Mijot&eacute; de queue de boeuf </span>
+              <h3>Mijot&eacute; de queue de boeuf </h3>
               <h4>Et riz sauvage aux zestes de citron</h4>
             </div>
             <div class="prix__fiche">
@@ -139,13 +144,13 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
+          </article>
         </div>
         <div class="menu__details">
           <h2 class="carte__resto">Desserts</h2>
-          <div class="menu__texte effet-10">
+          <article class="menu__texte effet-10">
             <div class="menu__resto__prix">
-              <span class="produit">Macaron noisette et chocolat </span>
+              <h3>Macaron noisette et chocolat </h3>
               <h4>Glace au caramel brun et sel de Gu&eacute;rande</h4>
             </div>
             <div class="prix__fiche">
@@ -156,10 +161,10 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-          <div class="menu__texte effet-10">
+          </article>
+          <article class="menu__texte effet-10">
             <div class="menu__resto__prix">
-              <span class="produit">  Baba au rhum revisit&eacute; </span>
+              <h3>  Baba au rhum revisit&eacute; </h3>
               <h4>Avec son coulis de citron</h4>
             </div>
             <div class="prix__fiche">
@@ -170,10 +175,10 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-          <div class="menu__texte effet-10">
+          </article>
+          <article class="menu__texte effet-10">
             <div class="menu__resto__prix">
-              <span class="produit">Tarte au citron meringu&eacute;e </span>
+              <h3>Tarte au citron meringu&eacute;e </h3>
               <h4>D&eacute;structur&eacute;e</h4>
             </div>
             <div class="prix__fiche">
@@ -184,10 +189,11 @@
             <div class="controle">
               <i class="fas fa-check-circle bouton-plat"></i>
             </div>
-          </div>
-        </div>
-        <div class="commander-bouton effet-2">
-          <a href="" class="reserver__bouton-explorer bouton-2"> Commander </a>
+          
+        </article>
+      </div>
+        <div class="commander-bouton effet-1">
+          <a href="" class="reserver__bouton-explorer bouton-commande"> Commander </a>
         </div>
       </section>
     </main>
@@ -196,15 +202,16 @@
         <div class="footer__logo">
           <img src="images/logo/ohmyfood.svg" alt="logo footer" />
         </div>
-        <div class="footer__lien">
-          <ul class="footer__lien">
-            <li><a href="#"><i class="fas fa-utensils footer-icones"></i>Proposer un restaurant</a></li>
+        <div class="footer">
+          <ul>
+            <li><a href="#"><i class="fas fa-utensils footer-icones"></i>&nbsp;Proposer un restaurant</a></li>
             <li><a href="#"><i class="fas fa-hands-helping footer-icones"></i>Devenir partenaire</a></li>
-            <li><a href="#"><i class="fas fa-info footer-icones"></i>Mentions l&eacute;gales</a></li>
+            <li><a href="#"><i class="fas fa-edit footer-icones"></i>Mentions l&eacute;gales</a></li>
             <li><a href="mailto:resa@ohmyfood.local"><i class="fas fa-envelope footer-icones"></i>Contact</a></li>
           </ul>
         </div>
-      </div>
-    </footer>
+        </div>
+      </footer>
+
   </body>
   </html>

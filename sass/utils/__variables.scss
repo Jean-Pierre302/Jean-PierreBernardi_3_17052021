@@ -1,7 +1,7 @@
 //charte graphique du site - couleurs //
-$couleur-primaire: #9356dc;//*violet:#9356dc*//
-$couleur-secondaire: #ff79da;//*rose fushia:#ff79da*//
-$couleur-tertiaire: #99e2d0;//*vert menthe:#99e2d0*//
+$couleur-primaire: #9356dc;//violet//
+$couleur-secondaire: #ff79da;//rose fushia//
+$couleur-tertiaire: #99e2d0;//vert menthe//
 $vert-fonce: #2c9c81;
 $fond-primaire: #f2f2f2;
 $fond-secondaire: #e9e9e9;
@@ -10,7 +10,7 @@ $fond-menu-defaut: #f6f6f6;
 $animation-couleur-fond: rgba(10, 10, 10, 0.6);
 
 //Police et style//
-$logo-title-font: "Shrikhand", cursive;
-$text-font: "Roboto", sans-serif;
-$fontSize: 25px;
-$fontWeight: bold;
+$police-titre: "Shrikhand", cursive;
+$police-texte: "Roboto", sans-serif;
+$police-dim: 1.6rem;
+$police-style: bold;
