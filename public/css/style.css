@@ -249,7 +249,7 @@ img {
   flex: 1 0 33%;
   overflow: hidden;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .menu__texte {
     flex: 25%;
     margin-left: 1rem;
@@ -412,7 +412,7 @@ img {
   width: 20vmin;
   z-index: 100;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .chargement {
     left: 50%;
     top: 57%;
@@ -471,14 +471,14 @@ img {
   transition: 0s linear 0.05s;
   box-shadow: 0 5px 15px 0 #c3c3c3;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .reserver__bouton-explorer {
     margin-top: 1rem;
   }
 }
 
 /*------ animation coeur -----------------*/
-.coeur .icones-defaut:hover, .coeur:hover, .coeur .hover-icones:hover {
+.coeur .defaut-icones:hover, .coeur:hover, .coeur .survol-icones:hover {
   transition: 2s 0.2s ease;
 }
 
@@ -492,12 +492,12 @@ img {
   font-size: 1.3rem;
   left: 50%;
 }
-.coeur .hover-icones {
+.coeur .survol-icones {
   left: 0;
   opacity: 0;
   position: absolute;
 }
-.coeur .hover-icones:hover {
+.coeur .survol-icones:hover {
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -511,20 +511,33 @@ img {
   opacity: 1;
   transition: 0s linear 0.05s;
 }
-.coeur .icones-defaut:hover {
+.coeur .defaut-icones:hover {
   opacity: 0;
   transition: 0s linear 0.05s;
 }
 
 /*------------ bouton de commande ---------------*/
 .bouton-commande {
-  margin-top: 1.6rem;
-  width: 45%;
-  height: 90%;
+  margin-top: 2rem;
+  width: 50%;
+  height: 75%;
 }
 @media all and (min-width: 760px) and (max-width: 959.98px) {
   .bouton-commande {
     width: 20%;
+    margin-bottom: -1rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 3840px) {
+  .bouton-commande {
+    width: 15%;
+    margin-bottom: -1rem;
+  }
+}
+@media all and (min-width: 960px) {
+  .bouton-commande {
+    width: 15%;
+    margin-bottom: -1rem;
   }
 }
 
@@ -535,7 +548,7 @@ img {
   align-items: center;
   background-color: #e9e9e9;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .header {
     display: flex;
     flex-direction: row;
@@ -552,7 +565,7 @@ img {
   border-bottom: 2px solid #f4f4f4;
   padding-top: 1.1rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .header__logo {
     text-align: left;
     margin-left: 3rem;
@@ -564,7 +577,7 @@ img {
   max-width: 100%;
   height: 1.45rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .header__logo img {
     height: 2.5rem;
   }
@@ -576,7 +589,7 @@ img {
   margin: auto;
   max-width: 12.5rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .rechercher__quartier {
     background: linear-gradient(#ff79da, #9356dc);
     padding: 1px;
@@ -589,7 +602,7 @@ img {
   margin-left: 1rem;
   padding: 0.65rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .rechercher__quartier .rechercher__pictogramme {
     color: white;
     margin-left: -0.1rem;
@@ -606,7 +619,7 @@ img {
   padding: 0.7rem;
   width: 100%;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .rechercher__quartier .saisie-champs {
     color: black;
     padding: 0.35rem 0.7rem;
@@ -615,7 +628,7 @@ img {
 .rechercher__quartier .saisie-champs:focus {
   outline: none;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .rechercher__quartier .saisie-champs::placeholder {
     color: white;
   }
@@ -794,7 +807,7 @@ article a {
     text-align: center;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .nav__mode {
     font-size: 1.5rem;
     text-align: center;
@@ -845,9 +858,14 @@ article a {
 .nav__bouton:hover .nav__icones {
   color: #9356dc;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .nav__bouton {
     margin: 3.5rem;
+  }
+}
+@media all and (min-width: 960px) {
+  .nav__bouton {
+    margin: 1rem;
   }
 }
 @media all and (min-width: 760px) and (max-width: 959.98px) {
@@ -875,11 +893,7 @@ article a {
 @media all and (max-width: 759.98px) {
   .nav__pastilles {
     position: absolute;
-<<<<<<< HEAD
-    left: 0.5rem;
-=======
     left: 1.2rem;
->>>>>>> responsive
     margin-top: -4px;
   }
 }
@@ -897,7 +911,7 @@ article a {
     margin: -1rem 0 0 0.25rem;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .nav__icones {
     margin: -1.1rem 0 0 0.75rem;
   }
@@ -930,7 +944,7 @@ article a {
     margin-top: -1rem;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .nav__texte {
     font-size: 1.25rem;
     margin-top: -1.5rem;
@@ -959,14 +973,14 @@ article a {
   transition: 0s linear 0.05s;
   box-shadow: 0 5px 15px 0 #c3c3c3;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .reserver__bouton-explorer {
     margin-top: 1rem;
   }
 }
 
 /*------ animation coeur -----------------*/
-.coeur .hover-icones:hover, .coeur:hover, .coeur .icones-defaut:hover {
+.coeur .survol-icones:hover, .coeur:hover, .coeur .defaut-icones:hover {
   transition: 2s 0.2s ease;
 }
 
@@ -980,12 +994,12 @@ article a {
   font-size: 1.3rem;
   left: 50%;
 }
-.coeur .hover-icones {
+.coeur .survol-icones {
   left: 0;
   opacity: 0;
   position: absolute;
 }
-.coeur .hover-icones:hover {
+.coeur .survol-icones:hover {
   background: linear-gradient(#ff79da, #9356dc);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -999,20 +1013,33 @@ article a {
   opacity: 1;
   transition: 0s linear 0.05s;
 }
-.coeur .icones-defaut:hover {
+.coeur .defaut-icones:hover {
   opacity: 0;
   transition: 0s linear 0.05s;
 }
 
 /*------------ bouton de commande ---------------*/
 .bouton-commande {
-  margin-top: 1.6rem;
-  width: 45%;
-  height: 90%;
+  margin-top: 2rem;
+  width: 50%;
+  height: 75%;
 }
 @media all and (min-width: 760px) and (max-width: 959.98px) {
   .bouton-commande {
     width: 20%;
+    margin-bottom: -1rem;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 3840px) {
+  .bouton-commande {
+    width: 15%;
+    margin-bottom: -1rem;
+  }
+}
+@media all and (min-width: 960px) {
+  .bouton-commande {
+    width: 15%;
+    margin-bottom: -1rem;
   }
 }
 
@@ -1120,7 +1147,7 @@ article a {
   flex: 1 0 33%;
   overflow: hidden;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .menu__texte {
     flex: 25%;
     margin-left: 1rem;
@@ -1283,7 +1310,7 @@ article a {
   width: 20vmin;
   z-index: 100;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .chargement {
     left: 50%;
     top: 57%;
@@ -1348,7 +1375,7 @@ h1 {
     line-height: 1.2rem;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   h1 {
     font-size: 1.6rem;
   }
@@ -1365,7 +1392,7 @@ h2 {
     font-size: 0.9rem;
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   h2 {
     font-size: 1.2rem;
   }
@@ -1389,7 +1416,7 @@ h2 {
   border-bottom: 2px solid #f4f4f4;
   padding: 0.5rem 3rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .menu__header__logo {
     display: flex;
     padding-top: 1rem;
@@ -1411,7 +1438,7 @@ header .couverture__image {
   width: 100%;
   z-index: -1;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   header .couverture__image {
     transform: scale(1.25);
     height: 30rem;
@@ -1448,7 +1475,7 @@ header .couverture__image img {
   margin-left: 1.4rem;
   margin-bottom: -0.5rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .menu__resto {
     text-align: center;
     font-size: 1.8rem;
@@ -1466,7 +1493,7 @@ header .couverture__image img {
   padding: 10px;
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .menu__details {
     display: flex;
     flex-flow: row wrap;
@@ -1483,7 +1510,7 @@ header .couverture__image img {
   text-align: left;
   opacity: 0.7;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .carte__resto {
     margin-top: 1rem;
     font-size: 1.1rem;
@@ -1498,7 +1525,7 @@ header .couverture__image img {
   padding-top: 0.2rem;
   width: 2rem;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   .carte__resto:after {
     border-bottom: none;
   }
@@ -1515,7 +1542,7 @@ article h3 {
   font-size: 0.95rem;
   font-weight: bold;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   article h3 {
     font-size: 1.3rem;
   }
@@ -1527,7 +1554,7 @@ article h4 {
   font-weight: 300;
   opacity: 0.95;
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1024px) and (max-width: 3840px) {
   article h4 {
     font-size: 1.1rem;
   }

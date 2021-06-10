@@ -39,7 +39,7 @@
     font-size: 1.3rem;
     left: 50%;
   }
-  .hover-icones {
+  .survol-icones {
     left: 0;
     opacity: 0;
     position: absolute;
@@ -60,7 +60,7 @@
     transition: 0s linear .05s;
     @extend %coeur-plein;
     }
-  .icones-defaut:hover {
+  .defaut-icones:hover {
     opacity: 0;
     transition: 0s linear .05s;
     @extend %coeur-plein;
@@ -70,11 +70,22 @@
 /*------------ bouton de commande ---------------*/
 
 .bouton-commande {
-  margin-top: 1.6rem;
-  width: 45%;
-  height:90%;
+  margin-top: 2rem;
+  width: 50%;
+  height:75%;
 
   @include tablette {
     width: 20%;
+    margin-bottom:-1rem;
+  }
+
+  @include bureau {
+    width :15%;
+    margin-bottom:-1rem;
+  }
+
+  @include portable {
+    width :15%;
+    margin-bottom:-1rem;
   }
 }

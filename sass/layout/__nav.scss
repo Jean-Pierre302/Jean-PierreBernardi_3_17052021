@@ -73,7 +73,9 @@ display: flex;
     @include bureau {
      margin: 3.5rem;
      } 
-
+     @include portable {
+     margin: 1rem;
+     } 
      @include tablette {
      margin: 1.5rem;
      }     
@@ -94,17 +96,12 @@ display: flex;
         height: 1.1rem;
         width: 1.1rem;
         margin: -0.8rem 0 0 -0.5rem;
-      @include mobile {
+        @include mobile {
       position: absolute;
-<<<<<<< HEAD
-      left: 0.5rem;
-=======
       left: 1.2rem;
->>>>>>> responsive
       margin-top: -4px;
       }
-
-}
+    }
     &__icones {
       display: flex;
       align-items: center;
