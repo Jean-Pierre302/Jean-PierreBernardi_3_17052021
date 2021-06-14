@@ -742,7 +742,7 @@ article a {
   .resto__mode {
     font-size: 1.1rem;
     font-family: "Roboto", sans-serif;
-    font-weight: police-style;
+    font-weight: $police-style;
     color: black;
     text-align: left;
     margin-left: -2.5rem;
