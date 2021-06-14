@@ -4,33 +4,57 @@ footer a {
   justify-content: flex-start;
   text-decoration: none;
   color: white;
-  margin-bottom:0.5rem;
-  margin-left:1%;
-  font-size:1.1rem;
-  @include mobile {
-  margin-left:1rem;
-  font-size:0.9em;
+    @include bureau {
+    padding-left:-1%;
+    padding-bottom:0.3em;
+    font-size:1.1em;
+    }
+    @include portable {
+    margin-left:3%;
+    padding-bottom:0.3em;
+    font-size:1.05em;
+  }
+    @include tablette {
+    margin-left:1.5%;
+    padding-bottom:0.3em;
+    font-size:0.95em;
+    }
+    @include mobile {
+    margin-left:4%;
+    padding-bottom:0.3em;
+    font-size:0.85em;
   }
 }
 
 .footer {
   background: black;
   opacity:0.8;
-  padding-bottom:0.5rem;
-    &__logo {
+  margin-top:-1.2rem;
+  padding-bottom:0.7rem;
+     &__logo {
     filter: invert(100%);
-    padding:1.5rem 0;
-    max-width: 100%;
+    padding:1rem 0 2rem 0;
     margin-left:2%;
     @include mobile {
     max-width: 30%;
     transform:scale(0.75);
     margin-left:1rem;
+    margin-top:1rem;
     }
     @include tablette {
-    max-width: 30%;
+    max-width: 40%;
+    transform:scale(0.80);
+    margin-left:-0.5%;
+    }
+    @include portable {
+    max-width: 100%;
     transform:scale(0.85);
-    margin-left:1rem;
+    margin-left:-3%;
+    }
+    @include bureau {
+    max-width: 100%;
+    transform:scale(0.95);
+    margin-left:1.5%;
     }
  }
 

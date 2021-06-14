@@ -16,7 +16,8 @@
 .reserver {
   flex: 100%;
   text-align: center;
-  padding: 2.5rem 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom:1.5rem;
   letter-spacing:0.03rem;
   background-color: $fond-primaire;
     &__bloc-titres {
@@ -40,28 +41,27 @@ article a {
   }
 
 .resto {
-  background-color: #f4f4f4;
-  padding: 1.25rem 0;
-  margin-top: 1rem;
+  background-color:$fond-defaut;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-flow: wrap;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  margin:0;
   height: 100%;
-    &__fiche {
+     &__fiche {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
-    min-width: 20%;
+    margin-bottom: 1rem;
+    min-width: 22%;
     background: white;
     box-shadow: 2px 2px 10px 2px $fond-secondaire;
-    border-radius: 1rem;
-
-      @include portable {
+    border-radius: 1.5rem;
+        
+        @include portable {
         width: 13.5rem;
         height: 100%;
-      }
+        }
 
       @include tablette {
         width:auto;
@@ -69,33 +69,37 @@ article a {
       }
   }
   &__mode {
-    padding: 1rem 0 1rem 1rem;
+    padding: 1.25rem;
     width: 100%;
     text-align: center;
     font-size: 1.7rem;
-    letter-spacing:0.1rem;
-  @include mobile {
-    font-size: 1.2rem;
-    letter-spacing:0;
+    @include mobile {
+    font-size: 1.1rem;
     font-family: $police-texte;
-    font-weight: 900;
-    color: black;
+    font-weight: police-style;
+    color: rgb(0, 0, 0, 1);
     text-align: left;
-    margin-top:0.5rem;
-    margin-bottom:-0.8rem;
+    margin-left:-2.5rem;
+    }
+    @include bureau {
+    letter-spacing:0.5rem;
+    font-size: 1.8rem;
+    margin-bottom:2rem;
+    margin-left:2%;
+    opacity: 0.8;
     }
   }
   &__image__header {
     position: relative;
-    max-height: 12.5rem;
-    img {
+    max-height: 9rem;
+      img {
       object-fit: cover;
       width: 100%;
-      max-height: 12.5rem;
-      border-top-left-radius: 1em;
-      border-top-right-radius: 1em;    
+      max-height: 9rem;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem; 
+      }
     }
-  }
 }
 
 .nouveau {
@@ -107,43 +111,44 @@ article a {
   padding: 0.2rem 0.7rem;
   font-weight: $police-style;
   z-index: 100;
-}
+  }
 
 .resto__detail {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 0.7rem;
   width: 100%;
-  margin-top: 0.7rem;
-
+  margin-top:0.25rem;
+      
   h3 {
     font-weight: bolder;
-    font-size: 1.2rem;
-    margin-left: 0;
+    font-size: 0.9rem;
+    margin-left: 1rem;
   }
 
   h4 {
     font-weight: lighter;
-    font-size: 1.1rem;
-    margin-left: 0;
+    font-size: 0.8rem;
+    margin-left: 1rem;
   }
 }
 
 .libelle-resto {
   text-decoration: none;
   color: black;
-  font-weight: $police-style;
-  font-size: 1.1rem;
+  margin-top:0.5rem;
+  font-weight: 900;
+  font-size: 0.9rem;
   font-family: $police-texte;
-}
+  }
 
 .libelle-lieu {
   text-decoration: none;
   color: black;
   font-weight: 300;
   opacity: 0.7;
-  font-size: 1rem;
+  margin-bottom:0.5rem;
+  font-size: 0.8rem;
   font-family: $police-texte;
 }

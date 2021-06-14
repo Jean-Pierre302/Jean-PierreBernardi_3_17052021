@@ -35,7 +35,7 @@ h2 {
   font-size: 1rem;
   line-height: 1rem;
   text-align:center;
-  opacity:0.6;
+  opacity:1;
   @include mobile {
   font-size: 0.9rem;
   }
@@ -73,8 +73,21 @@ header .header__retour__icones {
   display: block;
   margin-right: auto;
   position: absolute;
-  left: 20px;
+  left: -1.50rem;
   color: black;
+  margin-top:-0.5rem;
+  @include mobile {
+  left: 1.25rem;
+  }
+}
+
+
+  h5 {
+  margin-top:-1rem;
+  margin-left:5rem;
+  @include mobile {
+  display:none;
+  }
 }
 
 header .couverture__image {
@@ -82,8 +95,7 @@ header .couverture__image {
   width: 100%;
   z-index: -1;
   @include bureau {
-  transform:scale(1.25);
-  height: 30rem;
+  height: 25rem;
   }
 }
 
@@ -101,7 +113,7 @@ header .couverture__image img {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   margin-top: -5.5rem;
-  z-index: 100;
+  z-index: 999;
   }
 .menu .menu__choix {
   position: relative;
@@ -120,26 +132,32 @@ header .couverture__image img {
   font-size:1.8rem;
   margin-bottom:1rem;
   }
+  @include portable {
+  text-align: center;
+  font-size:1.7rem;
+  margin-bottom:1rem;
+  }
 }
 
 .coeur-menu {
   position: absolute;
   right: 30px;
   top: 20px;
+
 }
 
 .menu__plats {
   padding: 10px; 
+  width:auto;
   }
 
 .menu__details {
-  @include bureau {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     width: auto;
-    }
+
 }
 
 .carte__resto {
@@ -154,6 +172,12 @@ header .couverture__image img {
     width: 100%;
     text-align: center;
     }
+    @include portable {
+    margin-top:1rem;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    }
 
   &:after {
     content: "";
@@ -163,8 +187,11 @@ header .couverture__image img {
     width: 2rem;
     @include bureau {
     border-bottom: none;
-      }
     }
+    @include portable {
+    border-bottom: none;
+    }
+  } 
 }
 
 %text-overflow {
@@ -195,10 +222,9 @@ article h4 {
  }
 
 .menu__resto__prix {
-  width: 80%;
+  width: 100%;
   padding: 0.7rem;
   @extend %text-overflow;
-  
   }
 
 .commander-bouton {

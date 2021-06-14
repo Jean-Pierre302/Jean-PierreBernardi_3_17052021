@@ -14,7 +14,7 @@
 //------ Media queries différents écrans -------//
 
 @mixin bureau {
-  @media all and (min-width: 1024px) and (max-width: 3840px){
+  @media all and (min-width: 1440px) and (max-width: 3840px){
     @content;
   }
 }
