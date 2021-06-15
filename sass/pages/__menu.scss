@@ -82,9 +82,8 @@ header .header__retour__icones {
 }
 
 
-  h5 {
-  margin-top:-1rem;
-  margin-left:5rem;
+  b {
+  margin-left:2rem;
   @include mobile {
   display:none;
   }

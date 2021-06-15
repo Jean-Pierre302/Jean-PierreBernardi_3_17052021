@@ -30,7 +30,7 @@
 }
 .coeur {
   position: relative;
-  margin:.4rem;
+  margin:.7rem;
   opacity:0.9;
 
   i {
@@ -66,11 +66,7 @@
     @extend %coeur-plein;
   }
 
-  .defaut-icones:active {
-    opacity: 0;
-    transition: 0s linear .05s;
-    @extend %coeur-plein;
-  }
+  
   
 }
 

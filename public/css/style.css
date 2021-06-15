@@ -499,13 +499,13 @@ img {
 }
 
 /*------ animation coeur -----------------*/
-.coeur .defaut-icones:active, .coeur .defaut-icones:hover, .coeur:hover, .coeur .survol-icones:hover {
+.coeur .defaut-icones:hover, .coeur:hover, .coeur .survol-icones:hover {
   transition: 2s 0.2s ease;
 }
 
 .coeur {
   position: relative;
-  margin: 0.4rem;
+  margin: 0.7rem;
   opacity: 0.9;
 }
 .coeur i {
@@ -534,10 +534,6 @@ img {
   transition: 0s linear 0.05s;
 }
 .coeur .defaut-icones:hover {
-  opacity: 0;
-  transition: 0s linear 0.05s;
-}
-.coeur .defaut-icones:active {
   opacity: 0;
   transition: 0s linear 0.05s;
 }
@@ -715,21 +711,32 @@ article a {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  min-width: 22%;
   background: white;
   box-shadow: 2px 2px 10px 2px #e9e9e9;
   border-radius: 1.5rem;
 }
+@media all and (max-width: 759.98px) {
+  .resto__fiche {
+    min-width: 100%;
+    height: 100%;
+  }
+}
+@media all and (min-width: 1440px) and (max-width: 3840px) {
+  .resto__fiche {
+    min-width: 20%;
+    height: 100%;
+  }
+}
 @media all and (min-width: 960px) {
   .resto__fiche {
-    width: 13.5rem;
+    width: 22%;
     height: 100%;
   }
 }
 @media all and (min-width: 760px) and (max-width: 959.98px) {
   .resto__fiche {
-    width: auto;
-    height: 100%;
+    width: 35%;
+    height: auto;
   }
 }
 .resto__mode {
@@ -742,7 +749,7 @@ article a {
   .resto__mode {
     font-size: 1.1rem;
     font-family: "Roboto", sans-serif;
-    font-weight: $police-style;
+    font-weight: bold;
     color: black;
     text-align: left;
     margin-left: -2.5rem;
@@ -1014,13 +1021,13 @@ article a {
 }
 
 /*------ animation coeur -----------------*/
-.coeur .survol-icones:hover, .coeur:hover, .coeur .defaut-icones:hover, .coeur .defaut-icones:active {
+.coeur .survol-icones:hover, .coeur:hover, .coeur .defaut-icones:hover {
   transition: 2s 0.2s ease;
 }
 
 .coeur {
   position: relative;
-  margin: 0.4rem;
+  margin: 0.7rem;
   opacity: 0.9;
 }
 .coeur i {
@@ -1049,10 +1056,6 @@ article a {
   transition: 0s linear 0.05s;
 }
 .coeur .defaut-icones:hover {
-  opacity: 0;
-  transition: 0s linear 0.05s;
-}
-.coeur .defaut-icones:active {
   opacity: 0;
   transition: 0s linear 0.05s;
 }
@@ -1499,12 +1502,11 @@ header .header__retour__icones {
   }
 }
 
-h5 {
-  margin-top: -1rem;
-  margin-left: 5rem;
+b {
+  margin-left: 2rem;
 }
 @media all and (max-width: 759.98px) {
-  h5 {
+  b {
     display: none;
   }
 }
@@ -1682,7 +1684,7 @@ footer a {
 }
 @media all and (min-width: 1440px) and (max-width: 3840px) {
   footer a {
-    padding-left: -1%;
+    margin-left: -1%;
     padding-bottom: 0.3em;
     font-size: 1.1em;
   }
