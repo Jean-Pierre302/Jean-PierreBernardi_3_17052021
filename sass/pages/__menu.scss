@@ -1,4 +1,4 @@
-/*--------- Pages Restaurants --------*/
+//--------- Pages Restaurants --------//
 @import "../components/_buttons";
 @import "../layout/_animations";
 
@@ -11,7 +11,8 @@ body {
   margin: 0;
   text-align: left;
   overflow-x: hidden;
-  }
+}
+
 
 h1 {
   display:block;
@@ -38,18 +39,19 @@ h2 {
   opacity:1;
   @include mobile {
   font-size: 0.9rem;
+  padding-top:1rem;
   }
   @include bureau {
   font-size: 1.2rem;
   }
 }
 
-/*---------- Header -------------*/
+//---------- Header -------------//
 .menu__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-   &__logo {
+    &__logo {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -58,7 +60,7 @@ h2 {
     width: 160%;
     text-align: center;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-    border-bottom: 2px solid #f4f4f4;
+    border-bottom: 2px solid $fond-defaut;
     padding: 0.5rem 3rem;
      @include bureau {
       display: flex;
@@ -81,20 +83,25 @@ header .header__retour__icones {
   }
 }
 
-
+//retour page accueil//
   b {
   margin-left:2rem;
+  font-size:1.1rem;
+  opacity:0.7;
   @include mobile {
   display:none;
   }
 }
 
 header .couverture__image {
+  object-fit: cover;
   height: 16.5rem;
   width: 100%;
   z-index: -1;
   @include bureau {
-  height: 25rem;
+  max-width: 100%;
+  height: 30rem;
+  transform:scale(1.15);
   }
 }
 
@@ -105,13 +112,14 @@ header .couverture__image img {
   }
 
 .fond-resto {
-  background: #f6f6f6;
+  background: $fond-menu-defaut;
 }
 
 .menu main {
-  border-top-left-radius: 35px;
-  border-top-right-radius: 35px;
+  border-top-left-radius: 2.2rem;
+  border-top-right-radius: 2.2rem;
   margin-top: -5.5rem;
+  margin-bottom:1.25rem;
   z-index: 999;
   }
 .menu .menu__choix {
@@ -125,7 +133,7 @@ header .couverture__image img {
   font-size:1.25rem;
   padding-top:1.6rem;
   margin-left:1.4rem;
-  margin-bottom:-0.5rem;
+  margin-bottom:-.5rem;
   @include bureau {
   text-align: center;
   font-size:1.8rem;
@@ -140,13 +148,16 @@ header .couverture__image img {
 
 .coeur-menu {
   position: absolute;
-  right: 30px;
-  top: 20px;
-
+  right: 2.5rem;
+  top: 1rem;
+  @include mobile {
+  right: 1.5rem;
+  top: .8rem;
+  }
 }
 
 .menu__plats {
-  padding: 10px; 
+  padding: 0 .7rem; 
   width:auto;
   }
 
@@ -156,23 +167,22 @@ header .couverture__image img {
     align-items: center;
     justify-content: space-between;
     width: auto;
-
-}
+    }
 
 .carte__resto {
-  margin: 1.9rem 0 0.7rem 0.7rem;
-  font-size: 0.8rem;
+  margin: 1.7rem 0 0rem 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   text-align: left;
   opacity:0.7;
     @include bureau {
-    margin-top:1rem;
-    font-size: 1.1rem;
+    padding:2rem 0;
+    font-size: 1.2rem;
     width: 100%;
     text-align: center;
     }
     @include portable {
-    margin-top:1rem;
+    padding:1rem 0;
     font-size: 1rem;
     width: 100%;
     text-align: center;
@@ -193,16 +203,17 @@ header .couverture__image img {
   } 
 }
 
-%text-overflow {
+  %text-overflow {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   }
 
+  
   article h3 {
   color: black;
-  font-size: 0.95rem;
-  font-weight: $police-style;
+  font-size: 0.85rem;
+  font-weight: 900;
   @extend %text-overflow;
   @include bureau {
   font-size: 1.3rem;
@@ -211,9 +222,8 @@ header .couverture__image img {
 
 article h4 {
   color: #333;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 300;
-  opacity:0.95;
   @extend %text-overflow;
   @include bureau {
   font-size: 1.1rem;
@@ -222,13 +232,18 @@ article h4 {
 
 .menu__resto__prix {
   width: 100%;
-  padding: 0.7rem;
+  padding: 1rem;
+  margin-left:0.6rem;
+  @include mobile {
+  padding: .5rem;
+  margin-left:.3rem;
+  }
   @extend %text-overflow;
   }
 
 .commander-bouton {
   text-align: center;
-  margin-bottom:3rem;
+  padding-bottom:3rem;
 }
 
 .menu-cache {

@@ -1,11 +1,12 @@
-/*------- Animations ----------*/
+//------- Animations ----------//
 @import "../layout/_keyframes";
+
 
 .menu__texte {
   display: flex;
   justify-content: space-between;
   background: white;
-  border-radius: 1.25rem;
+  border-radius: 1rem;
   cursor: pointer;
   @include ombre-primaire;
   margin: 0.7rem 0;
@@ -13,6 +14,7 @@
   overflow: hidden;
   @include mobile {
   flex:100%;
+  margin-bottom:0;
   }
   @include tablette {
   flex:100%;
@@ -34,13 +36,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: bold;
     margin-top: 1.35rem;
     padding-right: 1rem;
     text-align: right;
     @include bureau {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    margin-top: 1.9rem;
+    padding-right: 1.5rem;
     }
   }
   .controle {
@@ -83,8 +87,8 @@
   animation: validation ease 0.5s 1;
 }
 
-// boucle pour obtenir 10 différents effets lié au temps d'animation (1s)// 
-@for $i from 1 through 10 {
+// boucle pour obtenir 5 différents effets lié au temps d'animation (1s)// 
+@for $i from 1 through 5 {
   .effet-#{$i} {
     animation: fondu 1s * $i;
   }

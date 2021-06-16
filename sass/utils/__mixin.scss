@@ -20,13 +20,13 @@
 }
 
 @mixin portable {
-  @media all and (min-width: 960px) {
+  @media all and (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin tablette {
-  @media all and (min-width: 760px) and (max-width: 959.98px) {
+  @media all and (min-width: 760px) and (max-width: 1023.98px) {
     @content;
   }
 }

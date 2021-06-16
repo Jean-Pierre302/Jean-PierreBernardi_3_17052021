@@ -1,4 +1,4 @@
-/*----- header de la Page accueil ---------*/
+//----- header de la Page accueil ---------//
 .header {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
     padding-top: 1.1rem;
       @include bureau {
       text-align: left;
-      margin-left:3rem;
+      margin-left:3.5rem;
       box-shadow: none;
       border:none;
       }

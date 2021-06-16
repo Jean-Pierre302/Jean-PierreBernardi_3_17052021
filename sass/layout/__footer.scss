@@ -42,9 +42,9 @@ footer a {
     margin-top:1rem;
     }
     @include tablette {
-    max-width: 40%;
+    max-width: 100%;
     transform:scale(0.80);
-    margin-left:-0.5%;
+    margin-left:-7%;
     }
     @include portable {
     max-width: 100%;
