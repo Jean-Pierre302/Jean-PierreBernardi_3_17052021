@@ -75,23 +75,9 @@ header .header__retour__icones {
   display: block;
   margin-right: auto;
   position: absolute;
-  left: -1.50rem;
-  color: black;
-  margin-top:-0.5rem;
-  @include mobile {
   left: 1.25rem;
+  color: black;
   }
-}
-
-//retour page accueil//
-  b {
-  margin-left:2rem;
-  font-size:1.1rem;
-  opacity:0.7;
-  @include mobile {
-  display:none;
-  }
-}
 
 header .couverture__image {
   object-fit: cover;
@@ -245,6 +231,7 @@ article h4 {
   text-align: center;
   padding-bottom:3rem;
 }
+
 
 .menu-cache {
   opacity:0;
