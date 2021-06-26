@@ -53,7 +53,7 @@ img {
   max-width: 100%;
 }
 
-@keyframes validation {
+@keyframes animation-validation {
   0% {
     transform: rotate(-90deg);
   }
@@ -107,11 +107,20 @@ img {
     transform: translate(1px, 0);
   }
 }
-@keyframes fondu {
-  from {
-    transform: scale(0.1);
+@keyframes animation-fondu {
+  0% {
+    transform: scale(0);
   }
-  to {
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
     transform: scale(1);
   }
 }
@@ -129,7 +138,7 @@ img {
     transform: rotate(-360deg);
   }
 }
-@keyframes activite {
+@keyframes animation-activite {
   0% {
     transform: rotate(0deg);
   }
@@ -145,7 +154,17 @@ img {
     transform: rotate(360deg);
   }
 }
-@keyframes validation {
+@keyframes animation-bas {
+  0% {
+    transform: translateY(-1.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes animation-validation {
   0% {
     transform: rotate(-90deg);
   }
@@ -199,11 +218,20 @@ img {
     transform: translate(1px, 0);
   }
 }
-@keyframes fondu {
-  from {
-    transform: scale(0.1);
+@keyframes animation-fondu {
+  0% {
+    transform: scale(0);
   }
-  to {
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
     transform: scale(1);
   }
 }
@@ -221,7 +249,7 @@ img {
     transform: rotate(-360deg);
   }
 }
-@keyframes activite {
+@keyframes animation-activite {
   0% {
     transform: rotate(0deg);
   }
@@ -235,6 +263,16 @@ img {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes animation-bas {
+  0% {
+    transform: translateY(-1.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 .menu__texte {
@@ -242,6 +280,13 @@ img {
   justify-content: space-between;
   background: white;
   border-radius: 1rem;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 8px #bdbdbd;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-name: animation-bas;
   cursor: pointer;
   box-shadow: 0 5px 15px 0 #c3c3c3;
   margin: 0.7rem 0;
@@ -252,23 +297,27 @@ img {
   .menu__texte {
     flex: 100%;
     margin-bottom: 0;
+    height: 3rem;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .menu__texte {
     flex: 100%;
-  }
-}
-@media all and (min-width: 1440px) and (max-width: 3840px) {
-  .menu__texte {
-    flex: 25%;
-    margin: 0 1rem;
+    height: 3.5rem;
   }
 }
 @media all and (min-width: 1024px) {
   .menu__texte {
+    flex: 18%;
+    margin: 0 1rem;
+    height: 4rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 3840px) {
+  .menu__texte {
     flex: 20%;
     margin: 0 1rem;
+    height: 5.5rem;
   }
 }
 .menu__texte:hover {
@@ -284,7 +333,7 @@ img {
   padding-right: 1rem;
   text-align: right;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .menu__texte .prix__fiche {
     font-size: 1.1rem;
     margin-top: 1.9rem;
@@ -304,8 +353,8 @@ img {
 }
 
 .menu__texte:hover .prix__fiche {
-  animation: animation-prix ease 0.1s;
-  animation-fill-mode: both;
+  animation: animation-prix ease 0.2s;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
   min-width: 3rem;
 }
@@ -316,38 +365,42 @@ img {
   background: #99e2d0;
   max-width: 3rem;
   overflow: hidden;
-  animation: animation-controle ease 0.1s;
-  animation-fill-mode: both;
+  animation: animation-controle ease-out 0.2s;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  transform-origin: 50% 50%;
 }
 
 .menu__texte:hover .bouton-plat {
   position: absolute;
-  left: 27%;
+  left: 30%;
   top: 30%;
   background: #99e2d0;
-  animation: validation ease 0.5s 1;
+  animation: animation-validation ease-in 0.2s 2;
+}
+
+.menu__texte:after {
+  content: "";
+  position: relative;
+  color: #888;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.menu__texte:hover:after {
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 .effet-1 {
-  animation: fondu 1s;
+  animation: animation-bas 1s;
 }
 
 .effet-2 {
-  animation: fondu 2s;
+  animation: animation-bas 2s;
 }
 
 .effet-3 {
-  animation: fondu 3s;
-}
-
-.effet-4 {
-  animation: fondu 4s;
-}
-
-.effet-5 {
-  animation: fondu 5s;
+  animation: animation-bas 3s;
 }
 
 .toupie {
@@ -415,7 +468,7 @@ img {
   width: 20vmin;
   z-index: 100;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .chargement {
     left: 50%;
     top: 57%;
@@ -471,10 +524,10 @@ img {
 }
 .reserver__bouton-explorer:hover {
   background: linear-gradient(#f77dd4, #ab65fa);
-  transition: 0s linear 0.05s;
+  transition: 1s linear 0.05s;
   box-shadow: 0 5px 15px 0 #c3c3c3;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .reserver__bouton-explorer {
     margin-top: 2rem;
   }
@@ -489,7 +542,7 @@ img {
   margin: 0.5rem;
   opacity: 0.9;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .coeur {
     margin-right: 1.2rem;
     margin-top: 0.5rem;
@@ -531,13 +584,13 @@ img {
   width: 50%;
   height: 50%;
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .bouton-commande {
     width: 20%;
     margin-bottom: -1rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .bouton-commande {
     width: 15%;
     margin-bottom: -1rem;
@@ -556,7 +609,7 @@ img {
   align-items: center;
   background-color: #e9e9e9;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .header {
     display: flex;
     flex-direction: row;
@@ -573,7 +626,7 @@ img {
   border-bottom: 2px solid #f4f4f4;
   padding-top: 1.1rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .header__logo {
     text-align: left;
     margin-left: 3.5rem;
@@ -585,9 +638,9 @@ img {
   max-width: 100%;
   height: 1.5rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .header__logo img {
-    height: 2.5rem;
+    height: 1.8rem;
   }
 }
 
@@ -597,7 +650,7 @@ img {
   margin: auto;
   max-width: 12.5rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .rechercher__quartier {
     background: linear-gradient(#ff79da, #9356dc);
     padding: 1px;
@@ -610,7 +663,7 @@ img {
   margin-left: 1rem;
   padding: 0.65rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .rechercher__quartier .rechercher__pictogramme {
     color: white;
     margin-left: -0.1rem;
@@ -627,7 +680,7 @@ img {
   padding: 0.7rem;
   width: 100%;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .rechercher__quartier .saisie-champs {
     color: #99e2d0;
     font-size: 1em;
@@ -637,7 +690,7 @@ img {
 .rechercher__quartier .saisie-champs:focus {
   outline: none;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .rechercher__quartier .saisie-champs::placeholder {
     font-weight: 900;
     color: white;
@@ -649,7 +702,7 @@ img {
   flex-flow: column nowrap;
   margin-left: auto;
   margin-right: auto;
-  max-width: 105rem;
+  max-width: 90rem;
 }
 
 .reserver__bloc-titres h2, .reserver__bloc-titres h1 {
@@ -706,7 +759,7 @@ article a {
     height: 100%;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .resto__fiche {
     min-width: 20%;
     height: 100%;
@@ -718,7 +771,7 @@ article a {
     height: 100%;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .resto__fiche {
     width: 35%;
     height: auto;
@@ -740,7 +793,7 @@ article a {
     margin-left: -2.5rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .resto__mode {
     letter-spacing: 0.5rem;
     font-size: 1.8rem;
@@ -827,13 +880,13 @@ article a {
     text-align: left;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .nav__mode {
     font-size: 1.4rem;
     text-align: center;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .nav__mode {
     font-size: 1.5rem;
     text-align: center;
@@ -883,7 +936,7 @@ article a {
 .nav__bouton:hover .nav__icones {
   color: #9356dc;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .nav__bouton {
     margin: 3.5rem;
   }
@@ -893,7 +946,7 @@ article a {
     margin: 1rem;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .nav__bouton {
     margin: 1.5rem;
   }
@@ -922,7 +975,7 @@ article a {
     margin-top: -4px;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .nav__pastilles {
     padding: 0 6px;
     max-height: 1.35rem;
@@ -939,12 +992,12 @@ article a {
   position: absolute;
   font-size: 1.25em;
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .nav__icones {
     margin: -1rem 0 0 0.25rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .nav__icones {
     margin: -1.1rem 0 0 0.75rem;
   }
@@ -969,14 +1022,14 @@ article a {
     font-size: 0.8rem;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .nav__texte {
     font-size: 0.9rem;
     margin-left: 2rem;
     margin-top: -1rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .nav__texte {
     font-size: 1.25rem;
     margin-top: -1.5rem;
@@ -1002,10 +1055,10 @@ article a {
 }
 .reserver__bouton-explorer:hover {
   background: linear-gradient(#f77dd4, #ab65fa);
-  transition: 0s linear 0.05s;
+  transition: 1s linear 0.05s;
   box-shadow: 0 5px 15px 0 #c3c3c3;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .reserver__bouton-explorer {
     margin-top: 2rem;
   }
@@ -1020,7 +1073,7 @@ article a {
   margin: 0.5rem;
   opacity: 0.9;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .coeur {
     margin-right: 1.2rem;
     margin-top: 0.5rem;
@@ -1062,13 +1115,13 @@ article a {
   width: 50%;
   height: 50%;
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .bouton-commande {
     width: 20%;
     margin-bottom: -1rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .bouton-commande {
     width: 15%;
     margin-bottom: -1rem;
@@ -1081,7 +1134,7 @@ article a {
   }
 }
 
-@keyframes validation {
+@keyframes animation-validation {
   0% {
     transform: rotate(-90deg);
   }
@@ -1135,11 +1188,20 @@ article a {
     transform: translate(1px, 0);
   }
 }
-@keyframes fondu {
-  from {
-    transform: scale(0.1);
+@keyframes animation-fondu {
+  0% {
+    transform: scale(0);
   }
-  to {
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
     transform: scale(1);
   }
 }
@@ -1157,7 +1219,7 @@ article a {
     transform: rotate(-360deg);
   }
 }
-@keyframes activite {
+@keyframes animation-activite {
   0% {
     transform: rotate(0deg);
   }
@@ -1173,11 +1235,28 @@ article a {
     transform: rotate(360deg);
   }
 }
+@keyframes animation-bas {
+  0% {
+    transform: translateY(-1.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .menu__texte {
   display: flex;
   justify-content: space-between;
   background: white;
   border-radius: 1rem;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 8px #bdbdbd;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-name: animation-bas;
   cursor: pointer;
   box-shadow: 0 5px 15px 0 #c3c3c3;
   margin: 0.7rem 0;
@@ -1188,23 +1267,27 @@ article a {
   .menu__texte {
     flex: 100%;
     margin-bottom: 0;
+    height: 3rem;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .menu__texte {
     flex: 100%;
-  }
-}
-@media all and (min-width: 1440px) and (max-width: 3840px) {
-  .menu__texte {
-    flex: 25%;
-    margin: 0 1rem;
+    height: 3.5rem;
   }
 }
 @media all and (min-width: 1024px) {
   .menu__texte {
+    flex: 18%;
+    margin: 0 1rem;
+    height: 4rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 3840px) {
+  .menu__texte {
     flex: 20%;
     margin: 0 1rem;
+    height: 5.5rem;
   }
 }
 .menu__texte:hover {
@@ -1220,7 +1303,7 @@ article a {
   padding-right: 1rem;
   text-align: right;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .menu__texte .prix__fiche {
     font-size: 1.1rem;
     margin-top: 1.9rem;
@@ -1240,8 +1323,8 @@ article a {
 }
 
 .menu__texte:hover .prix__fiche {
-  animation: animation-prix ease 0.1s;
-  animation-fill-mode: both;
+  animation: animation-prix ease 0.2s;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
   min-width: 3rem;
 }
@@ -1252,38 +1335,42 @@ article a {
   background: #99e2d0;
   max-width: 3rem;
   overflow: hidden;
-  animation: animation-controle ease 0.1s;
-  animation-fill-mode: both;
+  animation: animation-controle ease-out 0.2s;
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  transform-origin: 50% 50%;
 }
 
 .menu__texte:hover .bouton-plat {
   position: absolute;
-  left: 27%;
+  left: 30%;
   top: 30%;
   background: #99e2d0;
-  animation: validation ease 0.5s 1;
+  animation: animation-validation ease-in 0.2s 2;
+}
+
+.menu__texte:after {
+  content: "";
+  position: relative;
+  color: #888;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.menu__texte:hover:after {
+  opacity: 0;
+  transition: opacity 2s;
 }
 
 .effet-1 {
-  animation: fondu 1s;
+  animation: animation-bas 1s;
 }
 
 .effet-2 {
-  animation: fondu 2s;
+  animation: animation-bas 2s;
 }
 
 .effet-3 {
-  animation: fondu 3s;
-}
-
-.effet-4 {
-  animation: fondu 4s;
-}
-
-.effet-5 {
-  animation: fondu 5s;
+  animation: animation-bas 3s;
 }
 
 .toupie {
@@ -1351,7 +1438,7 @@ article a {
   width: 20vmin;
   z-index: 100;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .chargement {
     left: 50%;
     top: 57%;
@@ -1404,19 +1491,18 @@ h1 {
   display: block;
   margin: -0.5rem 0 0.5rem 2.5rem;
   font-weight: bold;
-  margin-left: auto;
   font-size: 1.4rem;
-  width: auto;
 }
 @media all and (max-width: 759.98px) {
   h1 {
-    margin-left: 6%;
-    width: 80%;
-    font-size: 1.2rem;
+    margin-left: 5%;
+    max-width: 90%;
+    text-align: center;
+    font-size: 1.3rem;
     line-height: 1.2rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   h1 {
     font-size: 1.6rem;
   }
@@ -1434,7 +1520,7 @@ h2 {
     padding-top: 1rem;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   h2 {
     font-size: 1.2rem;
   }
@@ -1457,7 +1543,7 @@ h2 {
   border-bottom: 2px solid #f4f4f4;
   padding: 0.5rem 3rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .menu__header__logo {
     display: flex;
     padding-top: 1rem;
@@ -1480,7 +1566,7 @@ header .couverture__image {
   width: 100%;
   z-index: -1;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   header .couverture__image {
     max-width: 100%;
     height: 30rem;
@@ -1519,7 +1605,7 @@ header .couverture__image img {
   margin-left: 1.4rem;
   margin-bottom: -0.5rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .menu__resto {
     text-align: center;
     font-size: 1.8rem;
@@ -1566,7 +1652,7 @@ header .couverture__image img {
   text-align: left;
   opacity: 0.7;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .carte__resto {
     padding: 2rem 0;
     font-size: 1.2rem;
@@ -1589,7 +1675,7 @@ header .couverture__image img {
   padding-top: 0.2rem;
   width: 2rem;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .carte__resto:after {
     border-bottom: none;
   }
@@ -1611,7 +1697,7 @@ article h3 {
   font-size: 0.85rem;
   font-weight: 900;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   article h3 {
     font-size: 1.3rem;
   }
@@ -1622,7 +1708,7 @@ article h4 {
   font-size: 0.75rem;
   font-weight: 300;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   article h4 {
     font-size: 1.1rem;
   }
@@ -1661,9 +1747,9 @@ footer a {
   text-decoration: none;
   color: white;
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   footer a {
-    margin-left: -1%;
+    max-width: 100%;
     padding-bottom: 0.3em;
     font-size: 1.1em;
   }
@@ -1675,9 +1761,9 @@ footer a {
     font-size: 1.05em;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   footer a {
-    margin-left: 1.5%;
+    margin-left: 10%;
     padding-bottom: 0.3em;
     font-size: 0.95em;
   }
@@ -1709,29 +1795,59 @@ footer a {
     margin-top: 1rem;
   }
 }
-@media all and (min-width: 760px) and (max-width: 1023.98px) {
+@media all and (min-width: 760px) and (max-width: 1023px) {
   .footer__logo {
     max-width: 100%;
     transform: scale(0.8);
-    margin-left: -7%;
   }
 }
 @media all and (min-width: 1024px) {
   .footer__logo {
     max-width: 100%;
-    transform: scale(0.85);
-    margin-left: -3%;
+    transform: scale(0.8);
+    margin-left: 36%;
   }
 }
-@media all and (min-width: 1440px) and (max-width: 3840px) {
+@media all and (min-width: 1280px) and (max-width: 3840px) {
   .footer__logo {
     max-width: 100%;
-    transform: scale(0.95);
-    margin-left: 1.5%;
+    transform: scale(1.05);
+    margin-left: 45%;
   }
 }
 .footer .footer-icones {
   margin: 0.2em 1em 0 1.2em;
+}
+
+@media all and (min-width: 1280px) and (max-width: 3840px) {
+  li {
+    background-color: black;
+    opacity: 0.8;
+    color: #fff;
+    transition: all 1s ease-out;
+    padding-left: 2.5%;
+  }
+
+  li > a:hover {
+    color: #333;
+    background-color: #fff;
+    width: 25%;
+  }
+}
+@media all and (min-width: 1024px) {
+  li {
+    background-color: black;
+    opacity: 0.8;
+    color: #fff;
+    transition: all 1s ease-out;
+    margin-left: 38.5%;
+  }
+
+  li > a:hover {
+    color: #333;
+    background-color: #fff;
+    max-width: 35%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

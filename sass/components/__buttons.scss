@@ -1,94 +1,94 @@
 // bouton reservation et commander //
 .reserver__bouton-explorer {
-  display: inline-block;
-  @include gradiant;
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  text-align: center;
-  border-radius: 1.55rem;
-  font-size: .9rem;
-  color: white;
-  @include ombre-primaire;
-  font-weight: 600;
-  padding: .7rem 1.4rem;
-  margin:2.2rem 0 1.2rem 0;
-  transition: .2s;
-  &:hover {
-    background: linear-gradient(#f77dd4, #ab65fa);
-    transition: 0s linear .05s;
-    @include ombre-primaire;
-    }
-    @include bureau {
-    margin-top: 2rem;
-    }
+display: inline-block;
+@include gradiant;
+text-decoration: none;
+cursor: pointer;
+border: 0;
+text-align: center;
+border-radius: 1.55rem;
+font-size: .9rem;
+color: white;
+@include ombre-primaire;
+font-weight: 600;
+padding: .7rem 1.4rem;
+margin:2.2rem 0 1.2rem 0;
+transition: .2s;
+&:hover {
+background: linear-gradient(#f77dd4, #ab65fa);
+transition: 1s linear .05s;
+@include ombre-primaire;
+}
+@include bureau {
+margin-top: 2rem;
+}
 }
 
 //------ animation logo coeur -----------------//
 %coeur-plein {
-  transition: 0s 0.5s ease;
+transition: 0s 0.5s ease;
 }
 .coeur {
-  position: relative;
-  margin:.5rem;
-  opacity:.9;
-  @include bureau {
-  margin-right: 1.2rem;
-  margin-top:.5rem;
-  }
+position: relative;
+margin:.5rem;
+opacity:.9;
+@include bureau {
+margin-right: 1.2rem;
+margin-top:.5rem;
+}
 
-  i {
-    color:    #738276;
-    font-size: 1.3rem;
-    left: 50%;
-  }
-  .survol-icones {
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    &:hover {
-      @include gradiant;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      opacity: 1;
-      z-index: 999;
-      transition: 1s linear .08s;
-      @extend %coeur-plein;
-    }
-  }
-    &:hover {
-      cursor: pointer;
-      pointer-events:auto;
-      overflow: hidden;
-      opacity: 1;
-      transition: 0s linear .08s;
-      @extend %coeur-plein;
-    }
-  .defaut-icones:hover {
-    opacity: 0;
-    transition: 0s linear .08s;
-    @extend %coeur-plein;
-  } 
-  
+i {
+color:    #738276;
+font-size: 1.3rem;
+left: 50%;
+}
+.survol-icones {
+left: 0;
+opacity: 0;
+position: absolute;
+&:hover {
+@include gradiant;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+opacity: 1;
+z-index: 999;
+transition: 1s linear .08s;
+@extend %coeur-plein;
+}
+}
+&:hover {
+cursor: pointer;
+pointer-events:auto;
+overflow: hidden;
+opacity: 1;
+transition: 0s linear .08s;
+@extend %coeur-plein;
+}
+.defaut-icones:hover {
+opacity: 0;
+transition: 0s linear .08s;
+@extend %coeur-plein;
+} 
+
 }
 
 //-------bouton commander page restaurant ---------------//
 
 .bouton-commande {
-  margin-top: 2.5rem;
-  padding:.6rem 0;
-  width: 50%;
-  height:50%;
-  @include tablette {
-    width: 20%;
-    margin-bottom:-1rem;
-  }
-  @include bureau {
-    width :15%;
-    margin-bottom:-1rem;
-  }
-  @include portable {
-    width :15%;
-    margin-bottom:-1rem;
-  }
+margin-top: 2.5rem;
+padding:.6rem 0;
+width: 50%;
+height:50%;
+@include tablette {
+width: 20%;
+margin-bottom:-1rem;
+}
+@include bureau {
+width :15%;
+margin-bottom:-1rem;
+}
+@include portable {
+width :15%;
+margin-bottom:-1rem;
+}
 }

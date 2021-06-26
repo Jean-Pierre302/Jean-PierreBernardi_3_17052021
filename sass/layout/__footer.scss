@@ -5,7 +5,7 @@ footer a {
   text-decoration: none;
   color: white;
     @include bureau {
-    margin-left:-1%;
+    max-width:100%;
     padding-bottom:0.3em;
     font-size:1.1em;
     }
@@ -15,7 +15,7 @@ footer a {
     font-size:1.05em;
   }
     @include tablette {
-    margin-left:1.5%;
+    margin-left:10%;
     padding-bottom:0.3em;
     font-size:0.95em;
     }
@@ -44,21 +44,56 @@ footer a {
     @include tablette {
     max-width: 100%;
     transform:scale(0.80);
-    margin-left:-7%;
+    
     }
     @include portable {
     max-width: 100%;
-    transform:scale(0.85);
-    margin-left:-3%;
+    transform:scale(0.80);
+    margin-left:36%;
     }
     @include bureau {
     max-width: 100%;
-    transform:scale(0.95);
-    margin-left:1.5%;
+    transform:scale(1.05);
+    margin-left:45%;
     }
  }
 
 .footer-icones {
   margin: 0.2em 1em 0 1.2em;
+ }
+
+}
+
+@include bureau {
+  li {
+  background-color: black;
+  opacity:0.8;
+  color: #fff;
+  transition: all 1s ease-out;
+  padding-left:2.5%;
+  }
+
+li>a:hover {
+  color: #333;
+  background-color: #fff;
+  width:25%;
   }
 }
+
+@include portable {
+  li {
+  background-color: black;
+  opacity:0.8;
+  color: #fff;
+  transition: all 1s ease-out;
+  margin-left:38.5%;
+  }
+
+li>a:hover {
+  color: #333;
+  background-color: #fff;
+  max-width:35%;
+  }
+}
+
+
